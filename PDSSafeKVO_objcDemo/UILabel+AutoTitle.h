@@ -1,5 +1,5 @@
 //
-//  UILabel+bug.h
+//  UILabel+AutoTitle.h
 //  PDSSafeKVO_objcDemo
 //
 //  Created by w91379137 on 2016/3/1.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UILabel (bug)
+@interface UILabel (AutoTitle)
 
 @property (nonatomic, strong) IBInspectable NSString *listenKey;
 @property (nonatomic, weak) IBOutlet id delegate;

@@ -1,5 +1,5 @@
 //
-//  UIButton+Connect.h
+//  AppDelegate.h
 //  PDSSafeKVO_objcDemo
 //
 //  Created by w91379137 on 2016/3/1.
@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIButton (Connect)
+@interface AppDelegate : UIResponder <UIApplicationDelegate>
 
-@property (nonatomic, weak) IBOutlet UIButton *delegate;
+@property (strong, nonatomic) UIWindow *window;
+
 
 @end
+

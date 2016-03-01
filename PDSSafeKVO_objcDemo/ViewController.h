@@ -1,5 +1,5 @@
 //
-//  UIButton+Connect.h
+//  ViewController.h
 //  PDSSafeKVO_objcDemo
 //
 //  Created by w91379137 on 2016/3/1.
@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIButton (Connect)
+@interface ViewController : UIViewController
 
-@property (nonatomic, weak) IBOutlet UIButton *delegate;
+@property(nonatomic, strong) NSString *titleString;
 
 @end

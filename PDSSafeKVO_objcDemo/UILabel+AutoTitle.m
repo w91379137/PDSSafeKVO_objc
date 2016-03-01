@@ -6,7 +6,7 @@
 //  Copyright © 2016年 w91379137. All rights reserved.
 //
 
-#import "UILabel+bug.h"
+#import "UILabel+AutoTitle.h"
 static char listenKeyChar;
 #include <objc/runtime.h>
 #import "NSObject+PDSSafeKVO.h"
