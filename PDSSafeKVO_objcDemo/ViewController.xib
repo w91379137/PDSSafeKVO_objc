@@ -7,6 +7,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController">
             <connections>
+                <outlet property="titleStringLabel" destination="qnH-wb-fu3" id="nhz-zZ-q4I"/>
+                <outlet property="titleStringLabel2" destination="7dT-Qh-DIh" id="zzn-qE-xoa"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -25,18 +27,6 @@
                     <connections>
                         <action selector="title:" destination="-1" eventType="touchUpInside" id="XOz-OP-vLC"/>
                         <outlet property="delegate" destination="FWW-K2-cDV" id="4aE-Ma-zWO"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FWW-K2-cDV">
-                    <rect key="frame" x="100" y="0.0" width="100" height="100"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="100" id="abq-Ne-1gP"/>
-                        <constraint firstAttribute="width" constant="100" id="wKl-zn-MYs"/>
-                    </constraints>
-                    <state key="normal" title="Button2" backgroundImage="20140916105724.png"/>
-                    <connections>
-                        <action selector="title:" destination="-1" eventType="touchUpInside" id="aiA-ck-2ig"/>
-                        <outlet property="delegate" destination="Pj9-Jv-V9c" id="uAv-RI-X4v"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6HP-Zx-MnU">
@@ -61,17 +51,6 @@
                     <connections>
                         <action selector="title:" destination="-1" eventType="touchUpInside" id="Lx9-7C-pBV"/>
                         <outlet property="delegate" destination="2OU-OM-UHx" id="dsq-nz-Qtu"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2OU-OM-UHx">
-                    <rect key="frame" x="100" y="200" width="100" height="100"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="100" id="RLv-Fa-96y"/>
-                        <constraint firstAttribute="width" constant="100" id="T2L-gY-d3B"/>
-                    </constraints>
-                    <state key="normal" title="Button6" backgroundImage="20140916105724.png"/>
-                    <connections>
-                        <action selector="title:" destination="-1" eventType="touchUpInside" id="Diz-93-7IW"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RJN-vq-GYB">
@@ -112,14 +91,8 @@
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qnH-wb-fu3">
                     <rect key="frame" x="0.0" y="448" width="320" height="20"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="string" keyPath="listenKey" value="titleString"/>
-                    </userDefinedRuntimeAttributes>
-                    <connections>
-                        <outlet property="delegate" destination="-1" id="0pc-lY-BSQ"/>
-                    </connections>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pj9-Jv-V9c">
                     <rect key="frame" x="0.0" y="100" width="100" height="100"/>
@@ -133,6 +106,35 @@
                         <outlet property="delegate" destination="6HP-Zx-MnU" id="XqG-QF-UPb"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FWW-K2-cDV">
+                    <rect key="frame" x="100" y="0.0" width="100" height="100"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="abq-Ne-1gP"/>
+                        <constraint firstAttribute="width" constant="100" id="wKl-zn-MYs"/>
+                    </constraints>
+                    <state key="normal" title="Button2" backgroundImage="20140916105724.png"/>
+                    <connections>
+                        <action selector="title:" destination="-1" eventType="touchUpInside" id="aiA-ck-2ig"/>
+                        <outlet property="delegate" destination="Pj9-Jv-V9c" id="uAv-RI-X4v"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2OU-OM-UHx">
+                    <rect key="frame" x="100" y="200" width="100" height="100"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="RLv-Fa-96y"/>
+                        <constraint firstAttribute="width" constant="100" id="T2L-gY-d3B"/>
+                    </constraints>
+                    <state key="normal" title="Button6" backgroundImage="20140916105724.png"/>
+                    <connections>
+                        <action selector="title:" destination="-1" eventType="touchUpInside" id="Diz-93-7IW"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7dT-Qh-DIh">
+                    <rect key="frame" x="8" y="419" width="304" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="0.15686274510000001" green="0.7725490196" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>

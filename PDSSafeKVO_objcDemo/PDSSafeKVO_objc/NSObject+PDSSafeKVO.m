@@ -6,6 +6,7 @@
 //  Copyright © 2016年 w91379137. All rights reserved.
 //
 
+#import "PDSSafeKVO_objc.h"
 #import "NSObject+PDSSafeKVO.h"
 
 @implementation NSObject (Weak)
@@ -26,13 +27,12 @@ id WeakReferenceNonretainedObjectValue (WeakReference ref)
 
 @end
 
-#include <objc/runtime.h>
 static char kSafeObserverArray;
 
-#define kOtherObj @"OtherObj"
-#define kKeyPath @"keyPath"
-#define kAction @"action"
-#define kPartner @"partner"
+#define kOtherObj   @"OtherObj"
+#define kKeyPath    @"keyPath"
+#define kAction     @"action"
+#define kPartner    @"partner"
 
 #define kIsSelfObserver @"IsSelfObserver"
 
@@ -46,17 +46,17 @@ static char kSafeObserverArray;
 
 -(NSMutableArray *)safeObserverArray
 {
+    return (NSMutableArray *)objc_getAssociatedObject(self, &kSafeObserverArray);
+}
+
+-(NSMutableArray *)nonnullSafeObserverArray
+{
     NSMutableArray *array = (NSMutableArray *)objc_getAssociatedObject(self, &kSafeObserverArray);
     if (![array isKindOfClass:[NSMutableArray class]]) {
         array = [NSMutableArray array];
         self.safeObserverArray = array;
     }
     return array;
-}
-
--(NSMutableArray *)deallocSafeObserverArray
-{
-    return (NSMutableArray *)objc_getAssociatedObject(self, &kSafeObserverArray);
 }
 
 #pragma mark - Add Remove
@@ -72,13 +72,13 @@ static char kSafeObserverArray;
     [selfKVODict setObject:MakeWeakReference(observer) forKey:kOtherObj];
     [selfKVODict setObject:keyPath forKey:kKeyPath];
     [selfKVODict setObject:@(NO) forKey:kIsSelfObserver];//被觀察者
-    [self.safeObserverArray addObject:selfKVODict];
+    [self.nonnullSafeObserverArray addObject:selfKVODict];
     
     NSMutableDictionary *otherKVODict = [NSMutableDictionary dictionary];
     [otherKVODict setObject: MakeWeakReference(self) forKey:kOtherObj];
     [otherKVODict setObject:keyPath forKey:kKeyPath];
     [otherKVODict setObject:@(YES) forKey:kIsSelfObserver];
-    [observer.safeObserverArray addObject:otherKVODict];//觀察者
+    [observer.nonnullSafeObserverArray addObject:otherKVODict];//觀察者
     
     [selfKVODict setObject:MakeWeakReference(otherKVODict) forKey:kPartner];
     [otherKVODict setObject:MakeWeakReference(selfKVODict) forKey:kPartner];
@@ -167,7 +167,7 @@ static char kSafeObserverArray;
 
 - (void)safeDeallocRelease
 {
-    NSMutableArray *copyToRun = [[self deallocSafeObserverArray] mutableCopy];
+    NSMutableArray *copyToRun = [self.safeObserverArray mutableCopy];
     
     for (NSDictionary *info in copyToRun) {
         
