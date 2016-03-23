@@ -8,6 +8,7 @@
 
 #import "UIButton+Connect.h"
 #import "NSObject+PDSSafeKVO.h"
+static void *groupContext = &groupContext;
 
 @implementation UIButton (Connect)
 
@@ -18,8 +19,8 @@
     for (NSString *key in keys) {
         [delegate addSafeObserver:self
                        forKeyPath:key
-                          options:NSKeyValueObservingOptionInitial | NSKeyValueObservingOptionNew
-                          context:NULL];
+                          options:NSKeyValueObservingOptionsWithoutPrior
+                          context:groupContext];
     }
 }
 
@@ -33,10 +34,20 @@
                         change:(NSDictionary *)change
                        context:(void *)context
 {
-    UIButton *button = (UIButton *)object;
-    if (self.enabled != button.enabled) self.enabled = button.enabled;
-    if (self.highlighted != button.highlighted) self.highlighted = button.highlighted;
-    if (self.selected != button.highlighted ? NO : button.selected) self.selected = button.highlighted ? NO : button.selected;
+    if (context == groupContext) {
+        UIButton *button = (UIButton *)object;
+        if (self.enabled != button.enabled)
+            self.enabled = button.enabled;
+        
+        if (self.highlighted != button.highlighted)
+            self.highlighted = button.highlighted;
+        
+        if (self.selected != button.highlighted ? NO : button.selected)
+            self.selected = button.highlighted ? NO : button.selected;
+    }
+    else {
+        [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
+    }
 }
 
 @end

@@ -8,17 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-#pragma mark - WeakReference
-@interface NSObject (WeakReference)
+#define NSKeyValueObservingOptionsWithoutPrior NSKeyValueObservingOptionInitial | NSKeyValueObservingOptionOld | NSKeyValueObservingOptionNew 
 
-typedef id (^WeakReference)(void);
-
-id WeakReferenceNonretainedObjectValue (WeakReference ref);
-WeakReference MakeWeakReference (id object);
-
-@end
-
-#pragma mark - PDSSafeKVO
 @interface NSObject (PDSSafeKVO)
 
 @property (nonatomic, strong) NSMutableArray *safeObserverArray;
@@ -27,6 +18,10 @@ WeakReference MakeWeakReference (id object);
              forKeyPath:(NSString *)keyPath
                 options:(NSKeyValueObservingOptions)options
                 context:(void *)context;
+
+- (void)removeSafeObserver:(NSObject *)observer
+                forKeyPath:(NSString *)keyPath
+                   context:(void *)context;
 
 - (void)removeSafeObserver:(NSObject *)observer
                 forKeyPath:(NSString *)keyPath;

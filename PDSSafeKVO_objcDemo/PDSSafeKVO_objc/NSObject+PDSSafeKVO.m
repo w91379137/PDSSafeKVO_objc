@@ -8,33 +8,9 @@
 
 #import "PDSSafeKVO_objc.h"
 #import "NSObject+PDSSafeKVO.h"
-
-@implementation NSObject (Weak)
-
-WeakReference MakeWeakReference (id object)
-{
-    __weak id weakref = object;
-    return ^{ return weakref; };
-}
-
-id WeakReferenceNonretainedObjectValue (WeakReference ref)
-{
-    if (ref == nil)
-        return nil;
-    else
-        return ref ();
-}
-
-@end
+#import "PDSKVORecord.h"
 
 static char kSafeObserverArray;
-
-#define kOtherObj   @"OtherObj"
-#define kKeyPath    @"keyPath"
-#define kAction     @"action"
-#define kPartner    @"partner"
-
-#define kIsSelfObserver @"IsSelfObserver"
 
 @implementation NSObject (PDSSafeKVO)
 
@@ -59,35 +35,19 @@ static char kSafeObserverArray;
     return array;
 }
 
-#pragma mark - Add Remove
+#pragma mark - Add / Remove
 - (void)addSafeObserver:(NSObject *)observer
              forKeyPath:(NSString *)keyPath
                 options:(NSKeyValueObservingOptions)options
                 context:(void *)context
-{
-    [self removeSafeObserver:observer
-                  forKeyPath:keyPath];
-    
-    NSMutableDictionary *selfKVODict = [NSMutableDictionary dictionary];
-    [selfKVODict setObject:MakeWeakReference(observer) forKey:kOtherObj];
-    [selfKVODict setObject:keyPath forKey:kKeyPath];
-    [selfKVODict setObject:@(NO) forKey:kIsSelfObserver];//被觀察者
-    [self.nonnullSafeObserverArray addObject:selfKVODict];
-    
-    NSMutableDictionary *otherKVODict = [NSMutableDictionary dictionary];
-    [otherKVODict setObject: MakeWeakReference(self) forKey:kOtherObj];
-    [otherKVODict setObject:keyPath forKey:kKeyPath];
-    [otherKVODict setObject:@(YES) forKey:kIsSelfObserver];
-    [observer.nonnullSafeObserverArray addObject:otherKVODict];//觀察者
-    
-    [selfKVODict setObject:MakeWeakReference(otherKVODict) forKey:kPartner];
-    [otherKVODict setObject:MakeWeakReference(selfKVODict) forKey:kPartner];
-    
-    /*
-    if (self.safeObserverArray.count > 10) {
-        NSLog(@"selfKVODict %@ %lu",NSStringFromClass([self class]) ,(unsigned long)self.safeObserverArray.count);
-    }
-     */
+{ 
+    PDSKVORecord *record = [[PDSKVORecord alloc] init];
+    record.sourceObject = self;
+    record.observerObject = observer;
+    record.keyPath = keyPath;
+    record.context = context;
+    [self.nonnullSafeObserverArray addObject:record];
+    [observer.nonnullSafeObserverArray addObject:record];
     
     [self addObserver:observer
            forKeyPath:keyPath
@@ -95,38 +55,81 @@ static char kSafeObserverArray;
               context:context];
 }
 
+/*
+ PDSKVORecord 其中一指標已經消失 故 無法完全在 PDSKVORecord 實作
+ */
+- (void)removeSafeObserver:(NSObject *)observer
+                forKeyPath:(NSString *)keyPath
+                   context:(void *)context
+{
+    PDSKVORecord *findRecord = nil;
+    
+    for (PDSKVORecord *record in self.safeObserverArray) {
+        
+        if ([record isSameSourceObject:self
+                        ObserverObject:observer
+                               KeyPath:keyPath
+                               Context:context]) {
+            findRecord = record;
+            break;
+        }
+    }
+    for (PDSKVORecord *record in observer.safeObserverArray) {
+        
+        if ([record isSameSourceObject:self
+                        ObserverObject:observer
+                               KeyPath:keyPath
+                               Context:context]) {
+            findRecord = record;
+            break;
+        }
+    }
+    
+    if (findRecord) {
+        
+        [self.safeObserverArray removeObject:findRecord];
+        [observer.safeObserverArray removeObject:findRecord];
+        
+        @try{
+            [self removeObserver:observer
+                      forKeyPath:keyPath
+                         context:findRecord.context];
+        } @catch(id anException) {}
+    }
+    else {
+        //NSLog(@"該物件並無 註冊此方法");
+    }
+}
+
+/*
+ PDSKVORecord 其中一指標已經消失 故 無法完全在 PDSKVORecord 實作
+ */
 - (void)removeSafeObserver:(NSObject *)observer
                 forKeyPath:(NSString *)keyPath
 {
-    NSDictionary *sameSelfDict =
-    [self sameObject:observer
-             KeyPath:keyPath
-      IsSelfObserver:NO];
+    NSMutableArray *findRecords = [NSMutableArray array];
     
-    NSDictionary *sameOtherDict =
-    [observer sameObject:self
-                 KeyPath:keyPath
-          IsSelfObserver:YES];
-    
-    if (sameSelfDict || sameOtherDict) {
+    for (PDSKVORecord *record in self.safeObserverArray) {
         
-        /*
-        if (sameSelfDict == nil || sameOtherDict == nil) {
-            NSLog(@"%@",sameSelfDict);
-            NSLog(@"%@",self.safeObserverArray);
-            NSLog(@"%lu",(unsigned long)self.hash);
-            
-            NSLog(@"%@",sameOtherDict);
-            NSLog(@"%@",observer.safeObserverArray);
-            NSLog(@"%lu",(unsigned long)observer.hash);
+        if ([record isSameSourceObject:self
+                        ObserverObject:observer
+                               KeyPath:keyPath]) {
+            [findRecords addObject:record];
         }
-         */
+    }
+    for (PDSKVORecord *record in observer.safeObserverArray) {
         
-        [self.safeObserverArray removeObject:sameSelfDict];
-        [self.safeObserverArray removeObject:WeakReferenceNonretainedObjectValue(sameOtherDict[kPartner])];
+        if ([record isSameSourceObject:self
+                        ObserverObject:observer
+                               KeyPath:keyPath]) {
+            [findRecords addObject:record];
+        }
+    }
+    
+    if (findRecords.count > 0) {
         
-        [observer.safeObserverArray removeObject:sameOtherDict];
-        [observer.safeObserverArray removeObject:WeakReferenceNonretainedObjectValue(sameSelfDict[kPartner])];
+        [self.safeObserverArray removeObjectsInArray:findRecords];
+        [observer.safeObserverArray removeObjectsInArray:findRecords];
         
         @try{
             [self removeObserver:observer
@@ -138,59 +141,33 @@ static char kSafeObserverArray;
     }
 }
 
-- (NSDictionary *)sameObject:(NSObject *)other
-                     KeyPath:(NSString *)keyPath
-              IsSelfObserver:(BOOL)isSelfObserver
-{
-    NSDictionary *sameDict = nil;
-    for (NSDictionary *checkDict in self.safeObserverArray) {
-        if ([checkDict[kIsSelfObserver] boolValue] == isSelfObserver) {
-            NSObject *obj = WeakReferenceNonretainedObjectValue(checkDict[kOtherObj]);
-            if (obj == other) {
-                NSString *keyPathx = checkDict[kKeyPath];
-                if ([keyPathx isEqualToString:keyPath]) {
-                    sameDict = checkDict;
-                    break;
-                }
-            }
-        }
-    }
-    return sameDict;
-}
-
 #pragma mark - Work
 - (void)fullDealloc
 {
-    [self safeDeallocRelease];
+    if (self.safeObserverArray) [self safeDeallocRelease]; //防止沒有 KVO 物件無限loop
     [self fullDealloc];
 }
 
 - (void)safeDeallocRelease
 {
     NSMutableArray *copyToRun = [self.safeObserverArray mutableCopy];
-    
-    for (NSDictionary *info in copyToRun) {
+    for (PDSKVORecord *record in copyToRun) {
         
-        BOOL isSelfObserver = [info[kIsSelfObserver] boolValue];
+        NSObject *sourceObject =
+        maybeDefault(record.sourceObject, NSObject, self);
         
-        NSObject *objObserver = nil;
-        NSObject *objRemoveObserver = nil;
+        NSObject *observerObject =
+        maybeDefault(record.observerObject, NSObject, self);
         
-        if (isSelfObserver) {
-            objObserver = self;
-            objRemoveObserver = WeakReferenceNonretainedObjectValue(info[kOtherObj]);
+        if ((sourceObject && observerObject) && //若其中一方不存在 則 不進行
+            sourceObject != observerObject) {
+            
+            [sourceObject removeSafeObserver:observerObject
+                                  forKeyPath:record.keyPath
+                                     context:record.context];
         }
         else {
-            objObserver = WeakReferenceNonretainedObjectValue(info[kOtherObj]);
-            objRemoveObserver = self;
-        }
-        
-        if (objObserver && objRemoveObserver) {//若其中一方不存在 則 不進行
-            @try {
-                [objRemoveObserver removeSafeObserver:objObserver
-                                           forKeyPath:info[kKeyPath]];
-            }
-            @catch (NSException *exception) {}
+            //NSLog(@"無效紀錄 出錯");
         }
     }
 }
@@ -231,6 +208,5 @@ static char kSafeObserverArray;
         }
     });
 }
-
 
 @end

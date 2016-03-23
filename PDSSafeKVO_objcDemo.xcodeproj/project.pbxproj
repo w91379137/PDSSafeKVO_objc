@@ -17,6 +17,7 @@
 		F8949E121C85D39100ECE854 /* NSObject+PDSSafeKVO.m in Sources */ = {isa = PBXBuildFile; fileRef = F8949E111C85D39100ECE854 /* NSObject+PDSSafeKVO.m */; };
 		F8949E151C85D5C700ECE854 /* UIButton+Connect.m in Sources */ = {isa = PBXBuildFile; fileRef = F8949E141C85D5C700ECE854 /* UIButton+Connect.m */; };
 		F8949E171C85D77400ECE854 /* 20140916105724.png in Resources */ = {isa = PBXBuildFile; fileRef = F8949E161C85D77400ECE854 /* 20140916105724.png */; };
+		F895FD3D1CA1C0D800D6698E /* PDSKVORecord.m in Sources */ = {isa = PBXBuildFile; fileRef = F895FD3C1CA1C0D800D6698E /* PDSKVORecord.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,8 @@
 		F8949E131C85D5C700ECE854 /* UIButton+Connect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Connect.h"; sourceTree = "<group>"; };
 		F8949E141C85D5C700ECE854 /* UIButton+Connect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Connect.m"; sourceTree = "<group>"; };
 		F8949E161C85D77400ECE854 /* 20140916105724.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 20140916105724.png; sourceTree = "<group>"; };
+		F895FD3B1CA1C0D800D6698E /* PDSKVORecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDSKVORecord.h; sourceTree = "<group>"; };
+		F895FD3C1CA1C0D800D6698E /* PDSKVORecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDSKVORecord.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +104,8 @@
 				F8760F651C89ED2C00DB8DE1 /* PDSSafeKVO_objc.h */,
 				F8949E101C85D39100ECE854 /* NSObject+PDSSafeKVO.h */,
 				F8949E111C85D39100ECE854 /* NSObject+PDSSafeKVO.m */,
+				F895FD3B1CA1C0D800D6698E /* PDSKVORecord.h */,
+				F895FD3C1CA1C0D800D6698E /* PDSKVORecord.m */,
 				F8760F661C89EDF800DB8DE1 /* NSObject+PDSSafeKVOAction.h */,
 				F8760F671C89EDF800DB8DE1 /* NSObject+PDSSafeKVOAction.m */,
 			);
@@ -184,6 +189,7 @@
 				F876D7091C85D0AD0023BF08 /* AppDelegate.m in Sources */,
 				F876D7061C85D0AD0023BF08 /* main.m in Sources */,
 				F8760F681C89EDF800DB8DE1 /* NSObject+PDSSafeKVOAction.m in Sources */,
+				F895FD3D1CA1C0D800D6698E /* PDSKVORecord.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

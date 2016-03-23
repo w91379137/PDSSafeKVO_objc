@@ -9,9 +9,11 @@
 #ifndef PDSSafeKVO_objc_h
 #define PDSSafeKVO_objc_h
 
-#define weakSelfMake(weakSelf) __weak __typeof(&*self)weakSelf = self;
-#define weakMake(object,weakObject) __weak __typeof(&*object)weakObject = object;
+#define weakSelfMake(weakSelf) __weak __typeof(self)weakSelf = self;
+#define weakMake(object,weakObject) __weak __typeof(object)weakObject = object;
+
 #define maybe(object,classType) ((classType *)([object isKindOfClass:[classType class]] ? object : nil))
+#define maybeDefault(object, classType, default) ((classType *)([object isKindOfClass:[classType class]] ? object : default))
 
 #include <objc/runtime.h>
 #import "NSObject+PDSSafeKVO.h"
