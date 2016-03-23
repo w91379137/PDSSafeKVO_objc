@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name     = 'PDSSafeKVO_objc'
-    s.version  = '0.0.2'
+    s.version  = '0.0.3'
     s.summary  = 'Description of your projectx'
     s.license  = {
         :type => 'MIT',
