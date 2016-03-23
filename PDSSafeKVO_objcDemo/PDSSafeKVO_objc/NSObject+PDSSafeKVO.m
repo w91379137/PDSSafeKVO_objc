@@ -165,8 +165,12 @@ static char kSafeObserverArray;
               context:kvoOption.context];
 }
 
+#pragma mark - v2 convenience
 - (NSArray<PDSKVORecord *> *)findSameModifyID:(NSString *)modifyID
 {
+    modifyID = maybe(modifyID, NSString);
+    if (!modifyID) return @[];
+    
     NSMutableArray *findRecord = [NSMutableArray array];
     
     for (PDSKVORecord *record in self.safeObserverArray) {
@@ -184,6 +188,29 @@ static char kSafeObserverArray;
     for (PDSKVORecord *record in findRecord) {
         [record removeSafeObserverRecord];
     }
+}
+
+- (void)addSafeObserver:(NSObject *)observer
+             forKeyPath:(NSString *)keyPath
+         UniqueModifyID:(NSString *)uniqueModifyID
+            ActionBlock:(KVOBlock)actionBlock
+{
+    PDSKVOOption *option = [[PDSKVOOption alloc] init];
+    
+    uniqueModifyID = maybe(uniqueModifyID, NSString);
+    if (uniqueModifyID) {
+        
+        //observer 排除有相同修改效力的kvo 例如 像是其他修改text 就需要移除
+        [observer removeSafeObserverWithModifyID:uniqueModifyID];
+        [option.nonNullInfoDict setObject:uniqueModifyID
+                                   forKey:ModifyIDKey];
+    }
+    
+    option.actionBlock = actionBlock;
+    
+    [self addSafeObserver:observer
+               forKeyPath:keyPath
+            PDSKVOOptions:option];
 }
 
 #pragma mark - observeValueForKeyPath
@@ -217,7 +244,7 @@ static char kSafeObserverArray;
     }
 }
 
-#pragma mark - Work
+#pragma mark - Dealloc work
 - (void)fullDealloc
 {
     if (self.safeObserverArray) [self safeDeallocRelease]; //防止沒有 KVO 物件無限loop

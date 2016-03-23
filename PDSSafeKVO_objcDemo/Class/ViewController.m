@@ -30,19 +30,27 @@
 
 - (void)registerKVO
 {
-    {
+    //一般寫法 請看 UIButton+Connect.m
+    
+    {//複雜寫法
         weakMake(titleStringLabel,label)
         PDSKVOOption *kvoOption = [[PDSKVOOption alloc] init];
         
-        {
+        {//排除相同text修改 可有可無
             NSString *modifyID = NSStringFromSelector(@selector(text));
             [kvoOption.nonNullInfoDict setObject:modifyID
                                           forKey:ModifyIDKey];
-            [titleStringLabel removeSafeObserverWithModifyID:modifyID];//排除相同text修改
+            [titleStringLabel removeSafeObserverWithModifyID:modifyID];
+        }
+        
+        {//設定動作
             [kvoOption setActionBlock:^(NSString *keyPath, id object, NSDictionary *change, void *context) {
                 
+                UIButton *button =
+                maybe([object valueForKey:keyPath], UIButton);
+                
                 label.text =
-                NSStringFromCGRect(maybe([object valueForKey:keyPath], UIButton).frame);
+                button ? NSStringFromCGRect(button.frame) : @"No Button";
                 
                 NSLog(@"Object Retain count is %ld", CFGetRetainCount((__bridge CFTypeRef)object));
             }];
@@ -53,26 +61,19 @@
                 PDSKVOOptions:kvoOption];
     }
     
-    {
+    {//簡便寫法
         weakMake(titleStringLabel2,label)
-        PDSKVOOption *kvoOption = [[PDSKVOOption alloc] init];
-        
-        {
-            NSString *modifyID = NSStringFromSelector(@selector(text));
-            [kvoOption.nonNullInfoDict setObject:modifyID
-                                          forKey:ModifyIDKey];
-            [titleStringLabel2 removeSafeObserverWithModifyID:modifyID];//排除相同text修改
-            
-            [kvoOption setActionBlock:^(NSString *keyPath, id object, NSDictionary *change, void *context) {
-                
-                label.text =
-                [maybe([object valueForKey:keyPath], UIButton) titleForState:UIControlStateNormal];
-            }];
-        }
-        
         [self addSafeObserver:titleStringLabel2
                    forKeyPath:NSStringFromSelector(@selector(button))
-                PDSKVOOptions:kvoOption];
+               UniqueModifyID:NSStringFromSelector(@selector(text))
+                  ActionBlock:^(NSString *keyPath, id object, NSDictionary *change, void *context) {
+                      
+                      UIButton *button =
+                      maybe([object valueForKey:keyPath], UIButton);
+                      
+                      label.text =
+                      button ? [button titleForState:UIControlStateNormal] : @"No Button";
+                  }];
     }
 }
 
@@ -82,14 +83,11 @@
     for (UIView *view in self.view.subviews) {
         [view removeFromSuperview];
     }
-    
-    [self removeSafeObserver:titleStringLabel
-                  forKeyPath:NSStringFromSelector(@selector(button))];
 }
 
-- (IBAction)title:(UIButton *)sender
+- (IBAction)buttonAction:(UIButton *)sender
 {
-    self.button = sender;
+    self.button = (self.button == sender) ? nil : sender;
 }
 
 @end

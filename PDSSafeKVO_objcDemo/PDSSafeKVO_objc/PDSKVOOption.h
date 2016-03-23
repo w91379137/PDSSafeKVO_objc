@@ -8,18 +8,33 @@
 
 #import "PDSSafeKVO_objc.h"
 
-typedef void (^KVOBlock)(NSString *keyPath, id object, NSDictionary *change, void *context);
 #define ModifyIDKey @"ModifyIDKey"
 
 @interface PDSKVOOption : NSObject
 
+//設定接續動作
 @property(nonatomic, copy) KVOBlock actionBlock;
-- (void)setActionBlock:(KVOBlock)actionBlock;//讓xcode會自動跳字
 
+//讓xcode會自動跳字
+- (void)setActionBlock:(KVOBlock)actionBlock;
+
+/*
+ 一般的 NSKeyValueObservingOptions 有預設值 
+ NSKeyValueObservingOptionsWithoutPrior
+ */
 @property(nonatomic) NSKeyValueObservingOptions observingOptions;
+
+/*
+ 辨識符號
+ */
 @property(nonatomic) void *context;
 
+/*
+ 存放任何其他你想存放的訊息
+ */
 @property(nonatomic, strong) NSMutableDictionary *infoDict;
+
+//簡便方法
 - (NSMutableDictionary *)nonNullInfoDict;
 
 @end

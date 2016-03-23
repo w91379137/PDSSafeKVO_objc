@@ -18,6 +18,8 @@
 #import <Foundation/Foundation.h>
 #include <objc/runtime.h>
 
+typedef void (^KVOBlock)(NSString *keyPath, id object, NSDictionary *change, void *context);
+
 #import "PDSKVOOption.h"
 #import "PDSKVORecord.h"
 

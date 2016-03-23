@@ -37,6 +37,9 @@ static void *groupContext = &groupContext;
 {
     if (context == groupContext) {
         UIButton *button = (UIButton *)object;
+        
+        //不相同才跟進
+        
         if (self.enabled != button.enabled)
             self.enabled = button.enabled;
         

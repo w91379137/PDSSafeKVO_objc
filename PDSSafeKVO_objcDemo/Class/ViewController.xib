@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController">
@@ -25,7 +25,7 @@
                     </constraints>
                     <state key="normal" title="Button1" backgroundImage="20140916105724.png"/>
                     <connections>
-                        <action selector="title:" destination="-1" eventType="touchUpInside" id="XOz-OP-vLC"/>
+                        <action selector="buttonAction:" destination="-1" eventType="touchUpInside" id="ygD-Oe-rIO"/>
                         <outlet property="delegate" destination="FWW-K2-cDV" id="4aE-Ma-zWO"/>
                     </connections>
                 </button>
@@ -37,7 +37,7 @@
                     </constraints>
                     <state key="normal" title="Button4" backgroundImage="20140916105724.png"/>
                     <connections>
-                        <action selector="title:" destination="-1" eventType="touchUpInside" id="pFc-wu-zr3"/>
+                        <action selector="buttonAction:" destination="-1" eventType="touchUpInside" id="3mM-Vx-Gjw"/>
                         <outlet property="delegate" destination="NYn-HS-hDV" id="fef-mf-G6J"/>
                     </connections>
                 </button>
@@ -49,7 +49,7 @@
                     </constraints>
                     <state key="normal" title="Button5" backgroundImage="20140916105724.png"/>
                     <connections>
-                        <action selector="title:" destination="-1" eventType="touchUpInside" id="Lx9-7C-pBV"/>
+                        <action selector="buttonAction:" destination="-1" eventType="touchUpInside" id="MiW-SP-UL2"/>
                         <outlet property="delegate" destination="2OU-OM-UHx" id="dsq-nz-Qtu"/>
                     </connections>
                 </button>
@@ -72,7 +72,7 @@
                     </constraints>
                     <state key="normal" title="PairA" backgroundImage="20140916105724.png"/>
                     <connections>
-                        <action selector="title:" destination="-1" eventType="touchUpInside" id="Hok-B2-nHv"/>
+                        <action selector="buttonAction:" destination="-1" eventType="touchUpInside" id="aaV-CW-ssx"/>
                         <outlet property="delegate" destination="nS6-HV-g2y" id="CN1-WZ-jBj"/>
                     </connections>
                 </button>
@@ -84,7 +84,7 @@
                     </constraints>
                     <state key="normal" title="PairB" backgroundImage="20140916105724.png"/>
                     <connections>
-                        <action selector="title:" destination="-1" eventType="touchUpInside" id="Nwu-Mg-gwQ"/>
+                        <action selector="buttonAction:" destination="-1" eventType="touchUpInside" id="OSi-QS-amt"/>
                         <outlet property="delegate" destination="pO1-lQ-7Zv" id="H4B-MU-bIc"/>
                     </connections>
                 </button>
@@ -102,7 +102,7 @@
                     </constraints>
                     <state key="normal" title="Button3" backgroundImage="20140916105724.png"/>
                     <connections>
-                        <action selector="title:" destination="-1" eventType="touchUpInside" id="TeF-bH-Bmd"/>
+                        <action selector="buttonAction:" destination="-1" eventType="touchUpInside" id="F8H-21-Akx"/>
                         <outlet property="delegate" destination="6HP-Zx-MnU" id="XqG-QF-UPb"/>
                     </connections>
                 </button>
@@ -114,7 +114,7 @@
                     </constraints>
                     <state key="normal" title="Button2" backgroundImage="20140916105724.png"/>
                     <connections>
-                        <action selector="title:" destination="-1" eventType="touchUpInside" id="aiA-ck-2ig"/>
+                        <action selector="buttonAction:" destination="-1" eventType="touchUpInside" id="gYB-GT-P4n"/>
                         <outlet property="delegate" destination="Pj9-Jv-V9c" id="uAv-RI-X4v"/>
                     </connections>
                 </button>
@@ -126,13 +126,13 @@
                     </constraints>
                     <state key="normal" title="Button6" backgroundImage="20140916105724.png"/>
                     <connections>
-                        <action selector="title:" destination="-1" eventType="touchUpInside" id="Diz-93-7IW"/>
+                        <action selector="buttonAction:" destination="-1" eventType="touchUpInside" id="VsV-LR-hzI"/>
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7dT-Qh-DIh">
                     <rect key="frame" x="8" y="419" width="304" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>

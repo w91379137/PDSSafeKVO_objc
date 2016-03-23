@@ -11,11 +11,29 @@
 @class PDSKVOOption;
 @interface PDSKVORecord : NSObject
 
+/*
+ 被聽取者
+ */
 @property(nonatomic, weak) NSObject *sourceObject;
+
+/*
+ 聽取者
+ */
 @property(nonatomic, weak) NSObject *observerObject;
+
+/*
+ 聽取路徑
+ */
 @property(nonatomic, strong) NSString *keyPath;
+
+/*
+ 辨識符號
+ */
 @property(nonatomic) void *context;
 
+/*
+ 特殊設定
+ */
 @property(nonatomic, strong) PDSKVOOption *options;
 
 - (BOOL)isSameSourceObject:(NSObject *)sourceObject
