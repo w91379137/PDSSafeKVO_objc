@@ -6,14 +6,17 @@
 //  Copyright © 2016年 w91379137. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "PDSSafeKVO_objc.h"
 
+@class PDSKVOOption;
 @interface PDSKVORecord : NSObject
 
 @property(nonatomic, weak) NSObject *sourceObject;
 @property(nonatomic, weak) NSObject *observerObject;
 @property(nonatomic, strong) NSString *keyPath;
 @property(nonatomic) void *context;
+
+@property(nonatomic, strong) PDSKVOOption *options;
 
 - (BOOL)isSameSourceObject:(NSObject *)sourceObject
             ObserverObject:(NSObject *)observerObject
@@ -23,4 +26,7 @@
             ObserverObject:(NSObject *)observerObject
                    KeyPath:(NSString *)keyPath
                    Context:(void *)context;
+
+- (void)removeSafeObserverRecord;
+
 @end

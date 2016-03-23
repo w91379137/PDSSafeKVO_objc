@@ -7,23 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F8760F681C89EDF800DB8DE1 /* NSObject+PDSSafeKVOAction.m in Sources */ = {isa = PBXBuildFile; fileRef = F8760F671C89EDF800DB8DE1 /* NSObject+PDSSafeKVOAction.m */; };
+		F830160B1CA28BB70052C59F /* 20140916105724.png in Resources */ = {isa = PBXBuildFile; fileRef = F83016051CA28BB70052C59F /* 20140916105724.png */; };
+		F830160C1CA28BB70052C59F /* UIButton+Connect.m in Sources */ = {isa = PBXBuildFile; fileRef = F83016071CA28BB70052C59F /* UIButton+Connect.m */; };
+		F830160D1CA28BB70052C59F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F83016091CA28BB70052C59F /* ViewController.m */; };
+		F830160E1CA28BB70052C59F /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F830160A1CA28BB70052C59F /* ViewController.xib */; };
 		F876D7061C85D0AD0023BF08 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F876D7051C85D0AD0023BF08 /* main.m */; };
 		F876D7091C85D0AD0023BF08 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F876D7081C85D0AD0023BF08 /* AppDelegate.m */; };
 		F876D7111C85D0AD0023BF08 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F876D7101C85D0AD0023BF08 /* Assets.xcassets */; };
 		F876D7141C85D0AD0023BF08 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F876D7121C85D0AD0023BF08 /* LaunchScreen.storyboard */; };
-		F876D71E1C85D0DF0023BF08 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F876D71C1C85D0DF0023BF08 /* ViewController.m */; };
-		F876D71F1C85D0DF0023BF08 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F876D71D1C85D0DF0023BF08 /* ViewController.xib */; };
 		F8949E121C85D39100ECE854 /* NSObject+PDSSafeKVO.m in Sources */ = {isa = PBXBuildFile; fileRef = F8949E111C85D39100ECE854 /* NSObject+PDSSafeKVO.m */; };
-		F8949E151C85D5C700ECE854 /* UIButton+Connect.m in Sources */ = {isa = PBXBuildFile; fileRef = F8949E141C85D5C700ECE854 /* UIButton+Connect.m */; };
-		F8949E171C85D77400ECE854 /* 20140916105724.png in Resources */ = {isa = PBXBuildFile; fileRef = F8949E161C85D77400ECE854 /* 20140916105724.png */; };
 		F895FD3D1CA1C0D800D6698E /* PDSKVORecord.m in Sources */ = {isa = PBXBuildFile; fileRef = F895FD3C1CA1C0D800D6698E /* PDSKVORecord.m */; };
+		F895FD401CA2382200D6698E /* PDSKVOOption.m in Sources */ = {isa = PBXBuildFile; fileRef = F895FD3F1CA2382200D6698E /* PDSKVOOption.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F83016051CA28BB70052C59F /* 20140916105724.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 20140916105724.png; sourceTree = "<group>"; };
+		F83016061CA28BB70052C59F /* UIButton+Connect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Connect.h"; sourceTree = "<group>"; };
+		F83016071CA28BB70052C59F /* UIButton+Connect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Connect.m"; sourceTree = "<group>"; };
+		F83016081CA28BB70052C59F /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		F83016091CA28BB70052C59F /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F830160A1CA28BB70052C59F /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
 		F8760F651C89ED2C00DB8DE1 /* PDSSafeKVO_objc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PDSSafeKVO_objc.h; sourceTree = "<group>"; };
-		F8760F661C89EDF800DB8DE1 /* NSObject+PDSSafeKVOAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+PDSSafeKVOAction.h"; sourceTree = "<group>"; };
-		F8760F671C89EDF800DB8DE1 /* NSObject+PDSSafeKVOAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+PDSSafeKVOAction.m"; sourceTree = "<group>"; };
 		F876D7011C85D0AD0023BF08 /* PDSSafeKVO_objcDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PDSSafeKVO_objcDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F876D7051C85D0AD0023BF08 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F876D7071C85D0AD0023BF08 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -31,16 +35,12 @@
 		F876D7101C85D0AD0023BF08 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F876D7131C85D0AD0023BF08 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F876D7151C85D0AD0023BF08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F876D71B1C85D0DF0023BF08 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		F876D71C1C85D0DF0023BF08 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		F876D71D1C85D0DF0023BF08 /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
 		F8949E101C85D39100ECE854 /* NSObject+PDSSafeKVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+PDSSafeKVO.h"; sourceTree = "<group>"; };
 		F8949E111C85D39100ECE854 /* NSObject+PDSSafeKVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+PDSSafeKVO.m"; sourceTree = "<group>"; };
-		F8949E131C85D5C700ECE854 /* UIButton+Connect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Connect.h"; sourceTree = "<group>"; };
-		F8949E141C85D5C700ECE854 /* UIButton+Connect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Connect.m"; sourceTree = "<group>"; };
-		F8949E161C85D77400ECE854 /* 20140916105724.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 20140916105724.png; sourceTree = "<group>"; };
 		F895FD3B1CA1C0D800D6698E /* PDSKVORecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDSKVORecord.h; sourceTree = "<group>"; };
 		F895FD3C1CA1C0D800D6698E /* PDSKVORecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDSKVORecord.m; sourceTree = "<group>"; };
+		F895FD3E1CA2382200D6698E /* PDSKVOOption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDSKVOOption.h; sourceTree = "<group>"; };
+		F895FD3F1CA2382200D6698E /* PDSKVOOption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDSKVOOption.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +54,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F83016041CA28BB70052C59F /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				F83016081CA28BB70052C59F /* ViewController.h */,
+				F83016091CA28BB70052C59F /* ViewController.m */,
+				F830160A1CA28BB70052C59F /* ViewController.xib */,
+				F83016061CA28BB70052C59F /* UIButton+Connect.h */,
+				F83016071CA28BB70052C59F /* UIButton+Connect.m */,
+				F83016051CA28BB70052C59F /* 20140916105724.png */,
+			);
+			path = Class;
+			sourceTree = "<group>";
+		};
 		F876D6F81C85D0AD0023BF08 = {
 			isa = PBXGroup;
 			children = (
@@ -77,14 +90,8 @@
 				F876D7121C85D0AD0023BF08 /* LaunchScreen.storyboard */,
 				F876D7071C85D0AD0023BF08 /* AppDelegate.h */,
 				F876D7081C85D0AD0023BF08 /* AppDelegate.m */,
-				F876D71B1C85D0DF0023BF08 /* ViewController.h */,
-				F876D71C1C85D0DF0023BF08 /* ViewController.m */,
-				F876D71D1C85D0DF0023BF08 /* ViewController.xib */,
-				F8949E161C85D77400ECE854 /* 20140916105724.png */,
-				F8949E131C85D5C700ECE854 /* UIButton+Connect.h */,
-				F8949E141C85D5C700ECE854 /* UIButton+Connect.m */,
+				F83016041CA28BB70052C59F /* Class */,
 				F8949E0F1C85D28B00ECE854 /* PDSSafeKVO_objc */,
-				F876D7151C85D0AD0023BF08 /* Info.plist */,
 				F876D7041C85D0AD0023BF08 /* Supporting Files */,
 			);
 			path = PDSSafeKVO_objcDemo;
@@ -94,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				F876D7051C85D0AD0023BF08 /* main.m */,
+				F876D7151C85D0AD0023BF08 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -102,12 +110,12 @@
 			isa = PBXGroup;
 			children = (
 				F8760F651C89ED2C00DB8DE1 /* PDSSafeKVO_objc.h */,
-				F8949E101C85D39100ECE854 /* NSObject+PDSSafeKVO.h */,
-				F8949E111C85D39100ECE854 /* NSObject+PDSSafeKVO.m */,
+				F895FD3E1CA2382200D6698E /* PDSKVOOption.h */,
+				F895FD3F1CA2382200D6698E /* PDSKVOOption.m */,
 				F895FD3B1CA1C0D800D6698E /* PDSKVORecord.h */,
 				F895FD3C1CA1C0D800D6698E /* PDSKVORecord.m */,
-				F8760F661C89EDF800DB8DE1 /* NSObject+PDSSafeKVOAction.h */,
-				F8760F671C89EDF800DB8DE1 /* NSObject+PDSSafeKVOAction.m */,
+				F8949E101C85D39100ECE854 /* NSObject+PDSSafeKVO.h */,
+				F8949E111C85D39100ECE854 /* NSObject+PDSSafeKVO.m */,
 			);
 			path = PDSSafeKVO_objc;
 			sourceTree = "<group>";
@@ -169,10 +177,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F830160B1CA28BB70052C59F /* 20140916105724.png in Resources */,
 				F876D7141C85D0AD0023BF08 /* LaunchScreen.storyboard in Resources */,
-				F876D71F1C85D0DF0023BF08 /* ViewController.xib in Resources */,
+				F830160E1CA28BB70052C59F /* ViewController.xib in Resources */,
 				F876D7111C85D0AD0023BF08 /* Assets.xcassets in Resources */,
-				F8949E171C85D77400ECE854 /* 20140916105724.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,12 +191,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F8949E151C85D5C700ECE854 /* UIButton+Connect.m in Sources */,
-				F876D71E1C85D0DF0023BF08 /* ViewController.m in Sources */,
+				F830160D1CA28BB70052C59F /* ViewController.m in Sources */,
+				F895FD401CA2382200D6698E /* PDSKVOOption.m in Sources */,
 				F8949E121C85D39100ECE854 /* NSObject+PDSSafeKVO.m in Sources */,
 				F876D7091C85D0AD0023BF08 /* AppDelegate.m in Sources */,
 				F876D7061C85D0AD0023BF08 /* main.m in Sources */,
-				F8760F681C89EDF800DB8DE1 /* NSObject+PDSSafeKVOAction.m in Sources */,
+				F830160C1CA28BB70052C59F /* UIButton+Connect.m in Sources */,
 				F895FD3D1CA1C0D800D6698E /* PDSKVORecord.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

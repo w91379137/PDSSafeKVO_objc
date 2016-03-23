@@ -6,14 +6,16 @@
 //  Copyright © 2016年 w91379137. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "PDSSafeKVO_objc.h"
 
 #define NSKeyValueObservingOptionsWithoutPrior NSKeyValueObservingOptionInitial | NSKeyValueObservingOptionOld | NSKeyValueObservingOptionNew 
 
+@class PDSKVORecord;
 @interface NSObject (PDSSafeKVO)
 
 @property (nonatomic, strong) NSMutableArray *safeObserverArray;
 
+#pragma mark - v1
 - (void)addSafeObserver:(NSObject *)observer
              forKeyPath:(NSString *)keyPath
                 options:(NSKeyValueObservingOptions)options
@@ -25,5 +27,13 @@
 
 - (void)removeSafeObserver:(NSObject *)observer
                 forKeyPath:(NSString *)keyPath;
+
+#pragma mark - v2
+- (void)addSafeObserver:(NSObject *)observer
+             forKeyPath:(NSString *)keyPath
+          PDSKVOOptions:(PDSKVOOption *)kvoOption;
+
+- (NSArray<PDSKVORecord *> *)findSameModifyID:(NSString *)modifyID;
+- (void)removeSafeObserverWithModifyID:(NSString *)modifyID;
 
 @end

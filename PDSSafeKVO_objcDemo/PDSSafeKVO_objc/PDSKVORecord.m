@@ -35,4 +35,11 @@
     return YES;
 }
 
+- (void)removeSafeObserverRecord
+{
+    [self.sourceObject removeSafeObserver:self.observerObject
+                               forKeyPath:self.keyPath
+                                  context:self.context];
+}
+
 @end

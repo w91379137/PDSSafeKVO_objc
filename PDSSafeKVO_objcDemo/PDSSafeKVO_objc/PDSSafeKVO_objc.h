@@ -15,8 +15,12 @@
 #define maybe(object,classType) ((classType *)([object isKindOfClass:[classType class]] ? object : nil))
 #define maybeDefault(object, classType, default) ((classType *)([object isKindOfClass:[classType class]] ? object : default))
 
+#import <Foundation/Foundation.h>
 #include <objc/runtime.h>
+
+#import "PDSKVOOption.h"
+#import "PDSKVORecord.h"
+
 #import "NSObject+PDSSafeKVO.h"
-#import "NSObject+PDSSafeKVOAction.h"
 
 #endif /* PDSSafeKVO_objc_h */

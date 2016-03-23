@@ -6,9 +6,7 @@
 //  Copyright © 2016年 w91379137. All rights reserved.
 //
 
-#import "PDSSafeKVO_objc.h"
 #import "NSObject+PDSSafeKVO.h"
-#import "PDSKVORecord.h"
 
 static char kSafeObserverArray;
 
@@ -36,16 +34,19 @@ static char kSafeObserverArray;
 }
 
 #pragma mark - Add / Remove
+
+#pragma mark - v1
 - (void)addSafeObserver:(NSObject *)observer
              forKeyPath:(NSString *)keyPath
                 options:(NSKeyValueObservingOptions)options
                 context:(void *)context
-{ 
+{
     PDSKVORecord *record = [[PDSKVORecord alloc] init];
     record.sourceObject = self;
     record.observerObject = observer;
     record.keyPath = keyPath;
     record.context = context;
+    
     [self.nonnullSafeObserverArray addObject:record];
     [observer.nonnullSafeObserverArray addObject:record];
     
@@ -138,6 +139,81 @@ static char kSafeObserverArray;
     }
     else {
         //NSLog(@"該物件並無 註冊此方法");
+    }
+}
+
+#pragma mark - v2
+- (void)addSafeObserver:(NSObject *)observer
+             forKeyPath:(NSString *)keyPath
+          PDSKVOOptions:(PDSKVOOption *)kvoOption
+{
+    kvoOption = maybeDefault(kvoOption, PDSKVOOption, [[PDSKVOOption alloc] init]);
+    
+    PDSKVORecord *record = [[PDSKVORecord alloc] init];
+    record.sourceObject = self;
+    record.observerObject = observer;
+    record.keyPath = keyPath;
+    record.context = kvoOption.context;
+    record.options = kvoOption;
+    
+    [self.nonnullSafeObserverArray addObject:record];
+    [observer.nonnullSafeObserverArray addObject:record];
+    
+    [self addObserver:observer
+           forKeyPath:keyPath
+              options:kvoOption.observingOptions
+              context:kvoOption.context];
+}
+
+- (NSArray<PDSKVORecord *> *)findSameModifyID:(NSString *)modifyID
+{
+    NSMutableArray *findRecord = [NSMutableArray array];
+    
+    for (PDSKVORecord *record in self.safeObserverArray) {
+        if ([record.options.infoDict[ModifyIDKey] isEqualToString:modifyID]) {
+            [findRecord addObject:record];
+        }
+    }
+    
+    return findRecord;
+}
+
+- (void)removeSafeObserverWithModifyID:(NSString *)modifyID
+{
+    NSArray *findRecord = [self findSameModifyID:@"text"];
+    for (PDSKVORecord *record in findRecord) {
+        [record removeSafeObserverRecord];
+    }
+}
+
+#pragma mark - observeValueForKeyPath
+- (void)observeValueForKeyPath:(NSString *)keyPath
+                      ofObject:(id)object
+                        change:(NSDictionary *)change
+                       context:(void *)context
+{
+    BOOL isAction = NO;
+    for (PDSKVORecord *record in self.safeObserverArray) {
+        
+        if (object == record.sourceObject &&
+            [keyPath isEqualToString:record.keyPath]) {
+            
+            PDSKVOOption *options = record.options;
+            
+            if (options.actionBlock &&
+                options.context == context) {
+                
+                options.actionBlock(keyPath,object,change,context);
+                isAction = YES;
+            }
+        }
+    }
+    
+    if (!isAction) {
+        Class superTest = [self superclass];
+        if (superTest) {
+            [superTest observeValueForKeyPath:keyPath ofObject:object change:change context:context];
+        }
     }
 }
 
