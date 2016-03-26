@@ -21,5 +21,5 @@ Pod::Spec.new do |s|
     s.platform = :ios
     s.ios.deployment_target = '8.0'
 
-    s.dependency 'PDSSetting_objc', :git => 'https://github.com/w91379137/PDSSetting_objc.git'
+#s.dependency 'PDSSetting_objc', :git => 'https://github.com/w91379137/PDSSetting_objc.git'
 end
