@@ -7,7 +7,6 @@
 //
 
 #import "ViewController.h"
-#import "PDSSafeKVO_objc.h"
 
 @interface ViewController ()
 {

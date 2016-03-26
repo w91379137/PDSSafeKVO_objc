@@ -1,0 +1,22 @@
+{
+  "name": "PDSSetting_objc",
+  "version": "0.0.1",
+  "summary": "Description",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "w91379137": "w91379137"
+  },
+  "homepage": "https://github.com/w91379137/PDSSetting_objc",
+  "source": {
+    "git": "https://github.com/w91379137/PDSSetting_objc.git",
+    "tag": "0.0.1"
+  },
+  "source_files": "PDSSetting_objc/*{.h,.c,.m}",
+  "requires_arc": true,
+  "platforms": {
+    "ios": "8.0"
+  }
+}

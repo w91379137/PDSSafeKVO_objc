@@ -29,4 +29,9 @@
     return self.infoDict;
 }
 
+//- (void)dealloc
+//{
+//    NSLog(@"dealloc %@",NSStringFromClass([self class]));
+//}
+
 @end

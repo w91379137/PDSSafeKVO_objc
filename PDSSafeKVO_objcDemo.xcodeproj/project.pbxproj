@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A702CF801EABE2D31665F994 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B1E0C205E70D35483F9C288 /* libPods.a */; };
 		F830160B1CA28BB70052C59F /* 20140916105724.png in Resources */ = {isa = PBXBuildFile; fileRef = F83016051CA28BB70052C59F /* 20140916105724.png */; };
 		F830160C1CA28BB70052C59F /* UIButton+Connect.m in Sources */ = {isa = PBXBuildFile; fileRef = F83016071CA28BB70052C59F /* UIButton+Connect.m */; };
 		F830160D1CA28BB70052C59F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F83016091CA28BB70052C59F /* ViewController.m */; };
@@ -15,19 +16,21 @@
 		F876D7091C85D0AD0023BF08 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F876D7081C85D0AD0023BF08 /* AppDelegate.m */; };
 		F876D7111C85D0AD0023BF08 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F876D7101C85D0AD0023BF08 /* Assets.xcassets */; };
 		F876D7141C85D0AD0023BF08 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F876D7121C85D0AD0023BF08 /* LaunchScreen.storyboard */; };
-		F8949E121C85D39100ECE854 /* NSObject+PDSSafeKVO.m in Sources */ = {isa = PBXBuildFile; fileRef = F8949E111C85D39100ECE854 /* NSObject+PDSSafeKVO.m */; };
-		F895FD3D1CA1C0D800D6698E /* PDSKVORecord.m in Sources */ = {isa = PBXBuildFile; fileRef = F895FD3C1CA1C0D800D6698E /* PDSKVORecord.m */; };
-		F895FD401CA2382200D6698E /* PDSKVOOption.m in Sources */ = {isa = PBXBuildFile; fileRef = F895FD3F1CA2382200D6698E /* PDSKVOOption.m */; };
+		F8B0DEC51CA69FF300E42329 /* NSObject+PDSSafeKVO.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B0DEBF1CA69FF300E42329 /* NSObject+PDSSafeKVO.m */; };
+		F8B0DEC61CA69FF300E42329 /* PDSKVOOption.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B0DEC11CA69FF300E42329 /* PDSKVOOption.m */; };
+		F8B0DEC71CA69FF300E42329 /* PDSKVORecord.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B0DEC31CA69FF300E42329 /* PDSKVORecord.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6E975F8CC31CBB846A53F135 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		9B1E0C205E70D35483F9C288 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		ADB07C1DAA89717970502203 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		F83016051CA28BB70052C59F /* 20140916105724.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 20140916105724.png; sourceTree = "<group>"; };
 		F83016061CA28BB70052C59F /* UIButton+Connect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Connect.h"; sourceTree = "<group>"; };
 		F83016071CA28BB70052C59F /* UIButton+Connect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Connect.m"; sourceTree = "<group>"; };
 		F83016081CA28BB70052C59F /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		F83016091CA28BB70052C59F /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		F830160A1CA28BB70052C59F /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
-		F8760F651C89ED2C00DB8DE1 /* PDSSafeKVO_objc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PDSSafeKVO_objc.h; sourceTree = "<group>"; };
 		F876D7011C85D0AD0023BF08 /* PDSSafeKVO_objcDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PDSSafeKVO_objcDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F876D7051C85D0AD0023BF08 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F876D7071C85D0AD0023BF08 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -35,12 +38,14 @@
 		F876D7101C85D0AD0023BF08 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F876D7131C85D0AD0023BF08 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F876D7151C85D0AD0023BF08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F8949E101C85D39100ECE854 /* NSObject+PDSSafeKVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+PDSSafeKVO.h"; sourceTree = "<group>"; };
-		F8949E111C85D39100ECE854 /* NSObject+PDSSafeKVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+PDSSafeKVO.m"; sourceTree = "<group>"; };
-		F895FD3B1CA1C0D800D6698E /* PDSKVORecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDSKVORecord.h; sourceTree = "<group>"; };
-		F895FD3C1CA1C0D800D6698E /* PDSKVORecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDSKVORecord.m; sourceTree = "<group>"; };
-		F895FD3E1CA2382200D6698E /* PDSKVOOption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDSKVOOption.h; sourceTree = "<group>"; };
-		F895FD3F1CA2382200D6698E /* PDSKVOOption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDSKVOOption.m; sourceTree = "<group>"; };
+		F8B0DEB11CA69EED00E42329 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		F8B0DEBE1CA69FF300E42329 /* NSObject+PDSSafeKVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+PDSSafeKVO.h"; sourceTree = "<group>"; };
+		F8B0DEBF1CA69FF300E42329 /* NSObject+PDSSafeKVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+PDSSafeKVO.m"; sourceTree = "<group>"; };
+		F8B0DEC01CA69FF300E42329 /* PDSKVOOption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDSKVOOption.h; sourceTree = "<group>"; };
+		F8B0DEC11CA69FF300E42329 /* PDSKVOOption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDSKVOOption.m; sourceTree = "<group>"; };
+		F8B0DEC21CA69FF300E42329 /* PDSKVORecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDSKVORecord.h; sourceTree = "<group>"; };
+		F8B0DEC31CA69FF300E42329 /* PDSKVORecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDSKVORecord.m; sourceTree = "<group>"; };
+		F8B0DEC41CA69FF300E42329 /* PDSSafeKVO_objc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDSSafeKVO_objc.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,12 +53,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A702CF801EABE2D31665F994 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C2CF1AA40F2AF22DACF8E74 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9B1E0C205E70D35483F9C288 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AAFE230720379280A9AA8CD4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				ADB07C1DAA89717970502203 /* Pods.debug.xcconfig */,
+				6E975F8CC31CBB846A53F135 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		F83016041CA28BB70052C59F /* Class */ = {
 			isa = PBXGroup;
 			children = (
@@ -72,6 +95,8 @@
 			children = (
 				F876D7031C85D0AD0023BF08 /* PDSSafeKVO_objcDemo */,
 				F876D7021C85D0AD0023BF08 /* Products */,
+				AAFE230720379280A9AA8CD4 /* Pods */,
+				2C2CF1AA40F2AF22DACF8E74 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -91,7 +116,7 @@
 				F876D7071C85D0AD0023BF08 /* AppDelegate.h */,
 				F876D7081C85D0AD0023BF08 /* AppDelegate.m */,
 				F83016041CA28BB70052C59F /* Class */,
-				F8949E0F1C85D28B00ECE854 /* PDSSafeKVO_objc */,
+				F8B0DEBD1CA69FF300E42329 /* PDSSafeKVO_objc */,
 				F876D7041C85D0AD0023BF08 /* Supporting Files */,
 			);
 			path = PDSSafeKVO_objcDemo;
@@ -102,23 +127,24 @@
 			children = (
 				F876D7051C85D0AD0023BF08 /* main.m */,
 				F876D7151C85D0AD0023BF08 /* Info.plist */,
+				F8B0DEB11CA69EED00E42329 /* PrefixHeader.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		F8949E0F1C85D28B00ECE854 /* PDSSafeKVO_objc */ = {
+		F8B0DEBD1CA69FF300E42329 /* PDSSafeKVO_objc */ = {
 			isa = PBXGroup;
 			children = (
-				F8760F651C89ED2C00DB8DE1 /* PDSSafeKVO_objc.h */,
-				F895FD3E1CA2382200D6698E /* PDSKVOOption.h */,
-				F895FD3F1CA2382200D6698E /* PDSKVOOption.m */,
-				F895FD3B1CA1C0D800D6698E /* PDSKVORecord.h */,
-				F895FD3C1CA1C0D800D6698E /* PDSKVORecord.m */,
-				F8949E101C85D39100ECE854 /* NSObject+PDSSafeKVO.h */,
-				F8949E111C85D39100ECE854 /* NSObject+PDSSafeKVO.m */,
+				F8B0DEBE1CA69FF300E42329 /* NSObject+PDSSafeKVO.h */,
+				F8B0DEBF1CA69FF300E42329 /* NSObject+PDSSafeKVO.m */,
+				F8B0DEC01CA69FF300E42329 /* PDSKVOOption.h */,
+				F8B0DEC11CA69FF300E42329 /* PDSKVOOption.m */,
+				F8B0DEC21CA69FF300E42329 /* PDSKVORecord.h */,
+				F8B0DEC31CA69FF300E42329 /* PDSKVORecord.m */,
+				F8B0DEC41CA69FF300E42329 /* PDSSafeKVO_objc.h */,
 			);
 			path = PDSSafeKVO_objc;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -127,9 +153,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F876D7181C85D0AD0023BF08 /* Build configuration list for PBXNativeTarget "PDSSafeKVO_objcDemo" */;
 			buildPhases = (
+				DE646CDAF9A37ABB0E9D6323 /* Check Pods Manifest.lock */,
 				F876D6FD1C85D0AD0023BF08 /* Sources */,
 				F876D6FE1C85D0AD0023BF08 /* Frameworks */,
 				F876D6FF1C85D0AD0023BF08 /* Resources */,
+				9BB92A9A6F69BB7292296D9A /* Embed Pods Frameworks */,
+				2AAE7326F33411EE632E5DAE /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -186,18 +215,66 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2AAE7326F33411EE632E5DAE /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9BB92A9A6F69BB7292296D9A /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DE646CDAF9A37ABB0E9D6323 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F876D6FD1C85D0AD0023BF08 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				F830160D1CA28BB70052C59F /* ViewController.m in Sources */,
-				F895FD401CA2382200D6698E /* PDSKVOOption.m in Sources */,
-				F8949E121C85D39100ECE854 /* NSObject+PDSSafeKVO.m in Sources */,
 				F876D7091C85D0AD0023BF08 /* AppDelegate.m in Sources */,
+				F8B0DEC71CA69FF300E42329 /* PDSKVORecord.m in Sources */,
+				F8B0DEC51CA69FF300E42329 /* NSObject+PDSSafeKVO.m in Sources */,
+				F8B0DEC61CA69FF300E42329 /* PDSKVOOption.m in Sources */,
 				F876D7061C85D0AD0023BF08 /* main.m in Sources */,
 				F830160C1CA28BB70052C59F /* UIButton+Connect.m in Sources */,
-				F895FD3D1CA1C0D800D6698E /* PDSKVORecord.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,8 +374,11 @@
 		};
 		F876D7191C85D0AD0023BF08 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ADB07C1DAA89717970502203 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/PDSSafeKVO_objcDemo/PrefixHeader.pch";
 				INFOPLIST_FILE = PDSSafeKVO_objcDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.a.PDSSafeKVO-objcDemo";
@@ -308,8 +388,11 @@
 		};
 		F876D71A1C85D0AD0023BF08 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6E975F8CC31CBB846A53F135 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/PDSSafeKVO_objcDemo/PrefixHeader.pch";
 				INFOPLIST_FILE = PDSSafeKVO_objcDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.a.PDSSafeKVO-objcDemo";
