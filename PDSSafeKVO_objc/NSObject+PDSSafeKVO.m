@@ -184,7 +184,7 @@ static char kSafeObserverArray;
 
 - (void)removeSafeObserverWithModifyID:(NSString *)modifyID
 {
-    NSArray *findRecord = [self findSameModifyID:@"text"];
+    NSArray *findRecord = [self findSameModifyID:modifyID];
     for (PDSKVORecord *record in findRecord) {
         [record removeSafeObserverRecord];
     }
