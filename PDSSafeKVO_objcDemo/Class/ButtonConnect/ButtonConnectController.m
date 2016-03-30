@@ -6,9 +6,9 @@
 //  Copyright © 2016年 w91379137. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "ButtonConnectController.h"
 
-@interface ViewController ()
+@interface ButtonConnectController ()
 {
     IBOutlet UILabel *titleStringLabel;
     IBOutlet UILabel *titleStringLabel2;
@@ -16,7 +16,7 @@
 
 @end
 
-@implementation ViewController
+@implementation ButtonConnectController
 
 #pragma mark - Init
 -(void)viewDidLoad
@@ -30,6 +30,8 @@
 - (void)registerKVO
 {
     //一般寫法 請看 UIButton+Connect.m
+    
+    NSString *noButton = @"No Select Button";
     
     {//複雜寫法
         weakMake(titleStringLabel,label)
@@ -49,7 +51,8 @@
                 maybe([object valueForKey:keyPath], UIButton);
                 
                 label.text =
-                button ? NSStringFromCGRect(button.frame) : @"No Button";
+                button ? NSStringFromCGRect([button convertRect:button.frame
+                                                         toView:button.window]) : noButton;
                 
                 NSLog(@"Object Retain count is %ld", CFGetRetainCount((__bridge CFTypeRef)object));
             }];
@@ -71,7 +74,7 @@
                       maybe([object valueForKey:keyPath], UIButton);
                       
                       label.text =
-                      button ? [button titleForState:UIControlStateNormal] : @"No Button";
+                      button ? [button titleForState:UIControlStateNormal] : noButton;
                   }];
     }
 }

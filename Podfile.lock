@@ -1,7 +1,9 @@
 PODS:
+  - Masonry (0.6.4)
   - PDSSetting_objc (0.0.1)
 
 DEPENDENCIES:
+  - Masonry
   - PDSSetting_objc (from `https://github.com/w91379137/PDSSetting_objc.git`)
 
 EXTERNAL SOURCES:
@@ -14,6 +16,7 @@ CHECKOUT OPTIONS:
     :git: https://github.com/w91379137/PDSSetting_objc.git
 
 SPEC CHECKSUMS:
+  Masonry: 281802d04d787ea2973179ee8bcb50500579ede2
   PDSSetting_objc: db49d962b3ccd35aef38e4933ee6dbfede606b34
 
 COCOAPODS: 0.39.0

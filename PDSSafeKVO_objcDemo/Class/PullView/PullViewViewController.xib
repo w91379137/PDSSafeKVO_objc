@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PullViewViewController">
+            <connections>
+                <outlet property="bottomBar" destination="xDd-Io-cAe" id="Uos-XR-bmM"/>
+                <outlet property="scrollView" destination="4cO-Dp-B2l" id="bCu-wU-Q8U"/>
+                <outlet property="topBar" destination="WhL-lY-GqR" id="vcz-bT-hBS"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4cO-Dp-B2l">
+                    <rect key="frame" x="0.0" y="-64" width="320" height="632"/>
+                </scrollView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WhL-lY-GqR">
+                    <rect key="frame" x="0.0" y="64" width="320" height="60"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="1" translatesAutoresizingMaskIntoConstraints="NO" id="L87-NL-Rv3">
+                            <rect key="frame" x="100" y="0.0" width="120" height="60"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="L87-NL-Rv3" secondAttribute="height" multiplier="2:1" id="ea2-EH-riV"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="0.50980392159999999" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="L87-NL-Rv3" firstAttribute="top" secondItem="WhL-lY-GqR" secondAttribute="top" id="MLm-9e-mgP"/>
+                        <constraint firstAttribute="bottom" secondItem="L87-NL-Rv3" secondAttribute="bottom" id="Pua-Jl-Zks"/>
+                        <constraint firstItem="L87-NL-Rv3" firstAttribute="centerX" secondItem="WhL-lY-GqR" secondAttribute="centerX" id="aT8-3U-TXP"/>
+                        <constraint firstAttribute="height" priority="900" constant="60" id="dzf-tt-ve2"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xDd-Io-cAe">
+                    <rect key="frame" x="0.0" y="508" width="320" height="60"/>
+                    <color key="backgroundColor" red="0.15686274510000001" green="0.7725490196" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" priority="900" constant="60" id="z3p-Lk-bxa"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="WhL-lY-GqR" secondAttribute="trailing" id="0Mp-00-ZqV"/>
+                <constraint firstAttribute="trailing" secondItem="4cO-Dp-B2l" secondAttribute="trailing" id="6yd-7D-Bc2"/>
+                <constraint firstItem="WhL-lY-GqR" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="9Ff-2p-Gk8"/>
+                <constraint firstItem="4cO-Dp-B2l" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="HvH-mz-7zg"/>
+                <constraint firstItem="WhL-lY-GqR" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="cPR-8D-5gt"/>
+                <constraint firstItem="4cO-Dp-B2l" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="-64" id="cmJ-jh-8OA"/>
+                <constraint firstAttribute="bottom" secondItem="xDd-Io-cAe" secondAttribute="bottom" id="dp8-fV-UA9"/>
+                <constraint firstItem="xDd-Io-cAe" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="oJu-b7-Xs8"/>
+                <constraint firstAttribute="trailing" secondItem="xDd-Io-cAe" secondAttribute="trailing" id="xa1-nl-WRq"/>
+                <constraint firstAttribute="bottom" secondItem="4cO-Dp-B2l" secondAttribute="bottom" id="xni-CD-Qs7"/>
+            </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+            <point key="canvasLocation" x="320" y="216"/>
+        </view>
+    </objects>
+</document>

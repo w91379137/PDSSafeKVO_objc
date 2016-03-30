@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "ViewController.h"
+#import "MainViewController.h"
 
 @interface AppDelegate ()
 
@@ -21,12 +21,11 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     [self.window makeKeyAndVisible];
     
-    ViewController *vc =
-    [[ViewController alloc] init];
+    MainViewController *vc =
+    [[MainViewController alloc] init];
     
     UINavigationController *nv =
     [[UINavigationController alloc] initWithRootViewController:vc];
-    nv.navigationBarHidden = YES;
     
     [self.window setRootViewController:nv];
     
