@@ -9,9 +9,10 @@
 #import "MainViewController.h"
 #import "ButtonConnectController.h"
 #import "PullViewViewController.h"
+#import "LocalizeViewController.h"
 
 static NSString *kTitleKey = @"TitleKey";
-static NSString *kBlockKey = @"BlockKey";
+static NSString *kClassKey = @"ClassKey";
 
 @interface MainViewController ()
 {
@@ -30,22 +31,15 @@ static NSString *kBlockKey = @"BlockKey";
     actionArray = [NSMutableArray array];
     [actionArray addObject:
      @{kTitleKey : @"按鈕聯動系統",
-       kBlockKey : ^{
-        
-        ButtonConnectController *vc =
-        [[ButtonConnectController alloc] init];
-        
-        [self.navigationController pushViewController:vc animated:YES];
-    }}];
+       kClassKey : NSStringFromClass([ButtonConnectController class])}];
+    
     [actionArray addObject:
      @{kTitleKey : @"上拉下拉測試",
-       kBlockKey : ^{
-        
-        PullViewViewController *vc =
-        [[PullViewViewController alloc] init];
-        
-        [self.navigationController pushViewController:vc animated:YES];
-    }}];
+       kClassKey : NSStringFromClass([PullViewViewController class])}];
+    
+    [actionArray addObject:
+     @{kTitleKey : @"多國語測試",
+       kClassKey : NSStringFromClass([LocalizeViewController class])}];
 }
 
 #pragma mark - UITableViewDataSource
@@ -71,9 +65,12 @@ static NSString *kBlockKey = @"BlockKey";
 - (void)      tableView:(UITableView *)tableView
 didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    void (^action)(void) =
-    maybe(actionArray[indexPath.row], NSDictionary)[kBlockKey];
-    if (action) action();
+    NSString *className =
+    maybe(maybe(actionArray[indexPath.row], NSDictionary)[kClassKey], NSString);
+    
+    Class class = NSClassFromString(className);
+    if ([class isSubclassOfClass:[UIViewController class]])
+        [self.navigationController pushViewController:[[class alloc] init] animated:YES];
 }
 
 @end

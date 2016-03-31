@@ -11,6 +11,7 @@
 @interface PullViewViewController : UIViewController
 {
     IBOutlet UIView *topBar;
+    IBOutlet UIView *topBar2;
     IBOutlet UIView *bottomBar;
     IBOutlet UIScrollView *scrollView;
 }

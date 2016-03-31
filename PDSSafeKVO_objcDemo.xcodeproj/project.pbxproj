@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		A702CF801EABE2D31665F994 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B1E0C205E70D35483F9C288 /* libPods.a */; };
+		F85AE74C1CADC05C00AE507A /* LocalizeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F85AE74A1CADC05C00AE507A /* LocalizeViewController.m */; };
+		F85AE74D1CADC05C00AE507A /* LocalizeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F85AE74B1CADC05C00AE507A /* LocalizeViewController.xib */; };
+		F85AE75E1CADC65C00AE507A /* LanguageCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = F85AE7591CADC65C00AE507A /* LanguageCenter.m */; };
+		F85AE7601CADC65C00AE507A /* UILabel+Language.m in Sources */ = {isa = PBXBuildFile; fileRef = F85AE75D1CADC65C00AE507A /* UILabel+Language.m */; };
+		F85AE7621CADCC1500AE507A /* 多國語言 - 工作表1.csv in Resources */ = {isa = PBXBuildFile; fileRef = F85AE7611CADCC1500AE507A /* 多國語言 - 工作表1.csv */; };
+		F85AE7651CADD2D000AE507A /* TranslationElement.m in Sources */ = {isa = PBXBuildFile; fileRef = F85AE7641CADD2D000AE507A /* TranslationElement.m */; };
 		F85EB31E1CAC6536002E9E54 /* ButtonConnectController.m in Sources */ = {isa = PBXBuildFile; fileRef = F85EB31C1CAC6536002E9E54 /* ButtonConnectController.m */; };
 		F85EB31F1CAC6536002E9E54 /* ButtonConnectController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F85EB31D1CAC6536002E9E54 /* ButtonConnectController.xib */; };
 		F85EB3221CAC6542002E9E54 /* UIButton+Connect.m in Sources */ = {isa = PBXBuildFile; fileRef = F85EB3211CAC6542002E9E54 /* UIButton+Connect.m */; };
@@ -30,6 +36,16 @@
 		9B1E0C205E70D35483F9C288 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADB07C1DAA89717970502203 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		F85AE7471CAD7E8E00AE507A /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		F85AE7491CADC05C00AE507A /* LocalizeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalizeViewController.h; sourceTree = "<group>"; };
+		F85AE74A1CADC05C00AE507A /* LocalizeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalizeViewController.m; sourceTree = "<group>"; };
+		F85AE74B1CADC05C00AE507A /* LocalizeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LocalizeViewController.xib; sourceTree = "<group>"; };
+		F85AE7581CADC65C00AE507A /* LanguageCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LanguageCenter.h; sourceTree = "<group>"; };
+		F85AE7591CADC65C00AE507A /* LanguageCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LanguageCenter.m; sourceTree = "<group>"; };
+		F85AE75C1CADC65C00AE507A /* UILabel+Language.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+Language.h"; sourceTree = "<group>"; };
+		F85AE75D1CADC65C00AE507A /* UILabel+Language.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Language.m"; sourceTree = "<group>"; };
+		F85AE7611CADCC1500AE507A /* 多國語言 - 工作表1.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "多國語言 - 工作表1.csv"; sourceTree = "<group>"; };
+		F85AE7631CADD2D000AE507A /* TranslationElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TranslationElement.h; sourceTree = "<group>"; };
+		F85AE7641CADD2D000AE507A /* TranslationElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TranslationElement.m; sourceTree = "<group>"; };
 		F85EB31B1CAC6536002E9E54 /* ButtonConnectController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ButtonConnectController.h; sourceTree = "<group>"; };
 		F85EB31C1CAC6536002E9E54 /* ButtonConnectController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ButtonConnectController.m; sourceTree = "<group>"; };
 		F85EB31D1CAC6536002E9E54 /* ButtonConnectController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ButtonConnectController.xib; sourceTree = "<group>"; };
@@ -95,8 +111,35 @@
 				F85EB3281CAC658B002E9E54 /* MainViewController.xib */,
 				F85EB3131CAC6440002E9E54 /* ButtonConnect */,
 				F85EB32C1CAC6E45002E9E54 /* PullView */,
+				F85AE7481CADC04900AE507A /* Localize */,
 			);
 			path = Class;
+			sourceTree = "<group>";
+		};
+		F85AE7481CADC04900AE507A /* Localize */ = {
+			isa = PBXGroup;
+			children = (
+				F85AE7491CADC05C00AE507A /* LocalizeViewController.h */,
+				F85AE74A1CADC05C00AE507A /* LocalizeViewController.m */,
+				F85AE74B1CADC05C00AE507A /* LocalizeViewController.xib */,
+				F85AE7571CADC65C00AE507A /* Language */,
+			);
+			name = Localize;
+			path = PDSSafeKVO_objcDemo/Class/Localize;
+			sourceTree = SOURCE_ROOT;
+		};
+		F85AE7571CADC65C00AE507A /* Language */ = {
+			isa = PBXGroup;
+			children = (
+				F85AE7611CADCC1500AE507A /* 多國語言 - 工作表1.csv */,
+				F85AE7581CADC65C00AE507A /* LanguageCenter.h */,
+				F85AE7591CADC65C00AE507A /* LanguageCenter.m */,
+				F85AE7631CADD2D000AE507A /* TranslationElement.h */,
+				F85AE7641CADD2D000AE507A /* TranslationElement.m */,
+				F85AE75C1CADC65C00AE507A /* UILabel+Language.h */,
+				F85AE75D1CADC65C00AE507A /* UILabel+Language.m */,
+			);
+			path = Language;
 			sourceTree = "<group>";
 		};
 		F85EB3131CAC6440002E9E54 /* ButtonConnect */ = {
@@ -249,7 +292,9 @@
 				F85EB31F1CAC6536002E9E54 /* ButtonConnectController.xib in Resources */,
 				F876D7141C85D0AD0023BF08 /* LaunchScreen.storyboard in Resources */,
 				F85EB32A1CAC658B002E9E54 /* MainViewController.xib in Resources */,
+				F85AE7621CADCC1500AE507A /* 多國語言 - 工作表1.csv in Resources */,
 				F876D7111C85D0AD0023BF08 /* Assets.xcassets in Resources */,
+				F85AE74D1CADC05C00AE507A /* LocalizeViewController.xib in Resources */,
 				F85EB3311CAC6E5D002E9E54 /* PullViewViewController.xib in Resources */,
 				F85EB3251CAC657A002E9E54 /* 20140916105724.png in Resources */,
 			);
@@ -311,7 +356,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F876D7091C85D0AD0023BF08 /* AppDelegate.m in Sources */,
+				F85AE75E1CADC65C00AE507A /* LanguageCenter.m in Sources */,
 				F8B0DEC71CA69FF300E42329 /* PDSKVORecord.m in Sources */,
+				F85AE7601CADC65C00AE507A /* UILabel+Language.m in Sources */,
 				F8B0DEC51CA69FF300E42329 /* NSObject+PDSSafeKVO.m in Sources */,
 				F85EB3291CAC658B002E9E54 /* MainViewController.m in Sources */,
 				F85EB3301CAC6E5D002E9E54 /* PullViewViewController.m in Sources */,
@@ -319,6 +366,8 @@
 				F876D7061C85D0AD0023BF08 /* main.m in Sources */,
 				F85EB31E1CAC6536002E9E54 /* ButtonConnectController.m in Sources */,
 				F85EB3221CAC6542002E9E54 /* UIButton+Connect.m in Sources */,
+				F85AE7651CADD2D000AE507A /* TranslationElement.m in Sources */,
+				F85AE74C1CADC05C00AE507A /* LocalizeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

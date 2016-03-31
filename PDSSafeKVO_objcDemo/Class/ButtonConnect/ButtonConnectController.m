@@ -34,7 +34,6 @@
     NSString *noButton = @"No Select Button";
     
     {//複雜寫法
-        weakMake(titleStringLabel,label)
         PDSKVOOption *kvoOption = [[PDSKVOOption alloc] init];
         
         {//排除相同text修改 可有可無
@@ -45,6 +44,8 @@
         }
         
         {//設定動作
+            weakMake(titleStringLabel,label)
+            
             [kvoOption setActionBlock:^(NSString *keyPath, id object, NSDictionary *change, void *context) {
                 
                 UIButton *button =
