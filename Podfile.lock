@@ -1,8 +1,10 @@
 PODS:
+  - CHCSVParser (2.1.0)
   - Masonry (0.6.4)
   - PDSSetting_objc (0.0.1)
 
 DEPENDENCIES:
+  - CHCSVParser
   - Masonry
   - PDSSetting_objc (from `https://github.com/w91379137/PDSSetting_objc.git`)
 
@@ -16,6 +18,7 @@ CHECKOUT OPTIONS:
     :git: https://github.com/w91379137/PDSSetting_objc.git
 
 SPEC CHECKSUMS:
+  CHCSVParser: 3bcc7bdb72111a31222e95d57eacceefe4e537e8
   Masonry: 281802d04d787ea2973179ee8bcb50500579ede2
   PDSSetting_objc: db49d962b3ccd35aef38e4933ee6dbfede606b34
 

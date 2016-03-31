@@ -29,6 +29,7 @@
 		6E975F8CC31CBB846A53F135 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		9B1E0C205E70D35483F9C288 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADB07C1DAA89717970502203 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		F85AE7471CAD7E8E00AE507A /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		F85EB31B1CAC6536002E9E54 /* ButtonConnectController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ButtonConnectController.h; sourceTree = "<group>"; };
 		F85EB31C1CAC6536002E9E54 /* ButtonConnectController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ButtonConnectController.m; sourceTree = "<group>"; };
 		F85EB31D1CAC6536002E9E54 /* ButtonConnectController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ButtonConnectController.xib; sourceTree = "<group>"; };
@@ -48,7 +49,6 @@
 		F876D7101C85D0AD0023BF08 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F876D7131C85D0AD0023BF08 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F876D7151C85D0AD0023BF08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F8B0DEB11CA69EED00E42329 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		F8B0DEBE1CA69FF300E42329 /* NSObject+PDSSafeKVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+PDSSafeKVO.h"; sourceTree = "<group>"; };
 		F8B0DEBF1CA69FF300E42329 /* NSObject+PDSSafeKVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+PDSSafeKVO.m"; sourceTree = "<group>"; };
 		F8B0DEC01CA69FF300E42329 /* PDSKVOOption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDSKVOOption.h; sourceTree = "<group>"; };
@@ -167,7 +167,7 @@
 			children = (
 				F876D7051C85D0AD0023BF08 /* main.m */,
 				F876D7151C85D0AD0023BF08 /* Info.plist */,
-				F8B0DEB11CA69EED00E42329 /* PrefixHeader.pch */,
+				F85AE7471CAD7E8E00AE507A /* PrefixHeader.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
