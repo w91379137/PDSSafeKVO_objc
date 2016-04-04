@@ -35,6 +35,15 @@ static char kSafeObserverArray;
 
 #pragma mark - Add / Remove
 
+#pragma mark - v0
+- (void)addObserver:(NSObject *)observer
+             Record:(PDSKVORecord *)record
+{
+    [self.nonnullSafeObserverArray addObject:record];
+    if (self != observer) //self KVO self
+        [observer.nonnullSafeObserverArray addObject:record];
+}
+
 #pragma mark - v1
 - (void)addSafeObserver:(NSObject *)observer
              forKeyPath:(NSString *)keyPath
@@ -47,8 +56,8 @@ static char kSafeObserverArray;
     record.keyPath = keyPath;
     record.context = context;
     
-    [self.nonnullSafeObserverArray addObject:record];
-    [observer.nonnullSafeObserverArray addObject:record];
+    [self addObserver:observer
+               Record:record];
     
     [self addObserver:observer
            forKeyPath:keyPath
@@ -156,8 +165,8 @@ static char kSafeObserverArray;
     record.context = kvoOption.context;
     record.options = kvoOption;
     
-    [self.nonnullSafeObserverArray addObject:record];
-    [observer.nonnullSafeObserverArray addObject:record];
+    [self addObserver:observer
+               Record:record];
     
     [self addObserver:observer
            forKeyPath:keyPath
@@ -174,7 +183,8 @@ static char kSafeObserverArray;
     NSMutableArray *findRecord = [NSMutableArray array];
     
     for (PDSKVORecord *record in self.safeObserverArray) {
-        if ([record.options.infoDict[ModifyIDKey] isEqualToString:modifyID]) {
+        if (record.observerObject == self &&
+            [record.options.infoDict[ModifyIDKey] isEqualToString:modifyID]) {
             [findRecord addObject:record];
         }
     }
@@ -262,16 +272,9 @@ static char kSafeObserverArray;
         NSObject *observerObject =
         maybeDefault(record.observerObject, NSObject, self);
         
-        if ((sourceObject && observerObject) && //若其中一方不存在 則 不進行
-            sourceObject != observerObject) {
-            
-            [sourceObject removeSafeObserver:observerObject
-                                  forKeyPath:record.keyPath
-                                     context:record.context];
-        }
-        else {
-            //NSLog(@"無效紀錄 出錯");
-        }
+        [sourceObject removeSafeObserver:observerObject
+                              forKeyPath:record.keyPath
+                                 context:record.context];
     }
 }
 

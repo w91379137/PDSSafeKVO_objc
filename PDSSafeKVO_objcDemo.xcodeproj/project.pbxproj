@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3AD842A50C8E05551A1C803E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B1E0C205E70D35483F9C288 /* libPods.a */; };
 		A702CF801EABE2D31665F994 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B1E0C205E70D35483F9C288 /* libPods.a */; };
+		F84043171CB30B260011C957 /* PDSSafeKVO_objcDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F84043161CB30B260011C957 /* PDSSafeKVO_objcDemoTests.m */; };
+		F840435F1CB30DC30011C957 /* TestPropertyObject.m in Sources */ = {isa = PBXBuildFile; fileRef = F840435E1CB30DC30011C957 /* TestPropertyObject.m */; };
 		F85AE74C1CADC05C00AE507A /* LocalizeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F85AE74A1CADC05C00AE507A /* LocalizeViewController.m */; };
 		F85AE74D1CADC05C00AE507A /* LocalizeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F85AE74B1CADC05C00AE507A /* LocalizeViewController.xib */; };
 		F85AE75E1CADC65C00AE507A /* LanguageCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = F85AE7591CADC65C00AE507A /* LanguageCenter.m */; };
@@ -31,10 +34,25 @@
 		F8B0DEC71CA69FF300E42329 /* PDSKVORecord.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B0DEC31CA69FF300E42329 /* PDSKVORecord.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		F84043191CB30B260011C957 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F876D6F91C85D0AD0023BF08 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F876D7001C85D0AD0023BF08;
+			remoteInfo = PDSSafeKVO_objcDemo;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		6E975F8CC31CBB846A53F135 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		9B1E0C205E70D35483F9C288 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADB07C1DAA89717970502203 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		F84043141CB30B260011C957 /* PDSSafeKVO_objcDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PDSSafeKVO_objcDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F84043161CB30B260011C957 /* PDSSafeKVO_objcDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PDSSafeKVO_objcDemoTests.m; sourceTree = "<group>"; };
+		F84043181CB30B260011C957 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F840435D1CB30DC30011C957 /* TestPropertyObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestPropertyObject.h; sourceTree = "<group>"; };
+		F840435E1CB30DC30011C957 /* TestPropertyObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestPropertyObject.m; sourceTree = "<group>"; };
 		F85AE7471CAD7E8E00AE507A /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		F85AE7491CADC05C00AE507A /* LocalizeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalizeViewController.h; sourceTree = "<group>"; };
 		F85AE74A1CADC05C00AE507A /* LocalizeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalizeViewController.m; sourceTree = "<group>"; };
@@ -75,6 +93,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		F84043111CB30B260011C957 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3AD842A50C8E05551A1C803E /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F876D6FE1C85D0AD0023BF08 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -114,6 +140,17 @@
 				F85AE7481CADC04900AE507A /* Localize */,
 			);
 			path = Class;
+			sourceTree = "<group>";
+		};
+		F84043151CB30B260011C957 /* PDSSafeKVO_objcDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				F84043161CB30B260011C957 /* PDSSafeKVO_objcDemoTests.m */,
+				F84043181CB30B260011C957 /* Info.plist */,
+				F840435D1CB30DC30011C957 /* TestPropertyObject.h */,
+				F840435E1CB30DC30011C957 /* TestPropertyObject.m */,
+			);
+			path = PDSSafeKVO_objcDemoTests;
 			sourceTree = "<group>";
 		};
 		F85AE7481CADC04900AE507A /* Localize */ = {
@@ -176,6 +213,7 @@
 			isa = PBXGroup;
 			children = (
 				F876D7031C85D0AD0023BF08 /* PDSSafeKVO_objcDemo */,
+				F84043151CB30B260011C957 /* PDSSafeKVO_objcDemoTests */,
 				F876D7021C85D0AD0023BF08 /* Products */,
 				AAFE230720379280A9AA8CD4 /* Pods */,
 				2C2CF1AA40F2AF22DACF8E74 /* Frameworks */,
@@ -186,6 +224,7 @@
 			isa = PBXGroup;
 			children = (
 				F876D7011C85D0AD0023BF08 /* PDSSafeKVO_objcDemo.app */,
+				F84043141CB30B260011C957 /* PDSSafeKVO_objcDemoTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -232,6 +271,27 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		F84043131CB30B260011C957 /* PDSSafeKVO_objcDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F840431D1CB30B260011C957 /* Build configuration list for PBXNativeTarget "PDSSafeKVO_objcDemoTests" */;
+			buildPhases = (
+				5EEB7121F136AEBB22C2B5B3 /* Check Pods Manifest.lock */,
+				F84043101CB30B260011C957 /* Sources */,
+				F84043111CB30B260011C957 /* Frameworks */,
+				F84043121CB30B260011C957 /* Resources */,
+				6E20ECC01120A5546904D846 /* Embed Pods Frameworks */,
+				54679F1CFA30C362D55EC32B /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F840431A1CB30B260011C957 /* PBXTargetDependency */,
+			);
+			name = PDSSafeKVO_objcDemoTests;
+			productName = PDSSafeKVO_objcDemoTests;
+			productReference = F84043141CB30B260011C957 /* PDSSafeKVO_objcDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		F876D7001C85D0AD0023BF08 /* PDSSafeKVO_objcDemo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F876D7181C85D0AD0023BF08 /* Build configuration list for PBXNativeTarget "PDSSafeKVO_objcDemo" */;
@@ -261,6 +321,10 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = w91379137;
 				TargetAttributes = {
+					F84043131CB30B260011C957 = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = F876D7001C85D0AD0023BF08;
+					};
 					F876D7001C85D0AD0023BF08 = {
 						CreatedOnToolsVersion = 7.2;
 					};
@@ -280,11 +344,19 @@
 			projectRoot = "";
 			targets = (
 				F876D7001C85D0AD0023BF08 /* PDSSafeKVO_objcDemo */,
+				F84043131CB30B260011C957 /* PDSSafeKVO_objcDemoTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		F84043121CB30B260011C957 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F876D6FF1C85D0AD0023BF08 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -316,6 +388,51 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		54679F1CFA30C362D55EC32B /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5EEB7121F136AEBB22C2B5B3 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6E20ECC01120A5546904D846 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		9BB92A9A6F69BB7292296D9A /* Embed Pods Frameworks */ = {
@@ -351,6 +468,15 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		F84043101CB30B260011C957 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F84043171CB30B260011C957 /* PDSSafeKVO_objcDemoTests.m in Sources */,
+				F840435F1CB30DC30011C957 /* TestPropertyObject.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F876D6FD1C85D0AD0023BF08 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -373,6 +499,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		F840431A1CB30B260011C957 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F876D7001C85D0AD0023BF08 /* PDSSafeKVO_objcDemo */;
+			targetProxy = F84043191CB30B260011C957 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		F876D7121C85D0AD0023BF08 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -385,6 +519,32 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		F840431B1CB30B260011C957 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ADB07C1DAA89717970502203 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = PDSSafeKVO_objcDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.a.PDSSafeKVO-objcDemoTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PDSSafeKVO_objcDemo.app/PDSSafeKVO_objcDemo";
+			};
+			name = Debug;
+		};
+		F840431C1CB30B260011C957 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6E975F8CC31CBB846A53F135 /* Pods.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = PDSSafeKVO_objcDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.a.PDSSafeKVO-objcDemoTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PDSSafeKVO_objcDemo.app/PDSSafeKVO_objcDemo";
+			};
+			name = Release;
+		};
 		F876D7161C85D0AD0023BF08 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -496,6 +656,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		F840431D1CB30B260011C957 /* Build configuration list for PBXNativeTarget "PDSSafeKVO_objcDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F840431B1CB30B260011C957 /* Debug */,
+				F840431C1CB30B260011C957 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		F876D6FC1C85D0AD0023BF08 /* Build configuration list for PBXProject "PDSSafeKVO_objcDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

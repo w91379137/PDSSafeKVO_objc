@@ -1,6 +1,6 @@
 PODS:
   - CHCSVParser (2.1.0)
-  - Masonry (0.6.4)
+  - Masonry (1.0.0)
   - PDSSetting_objc (0.0.1)
 
 DEPENDENCIES:
@@ -19,7 +19,7 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   CHCSVParser: 3bcc7bdb72111a31222e95d57eacceefe4e537e8
-  Masonry: 281802d04d787ea2973179ee8bcb50500579ede2
+  Masonry: b529bb169217897b6354d4b56b1fada6d475b13d
   PDSSetting_objc: db49d962b3ccd35aef38e4933ee6dbfede606b34
 
 COCOAPODS: 0.39.0

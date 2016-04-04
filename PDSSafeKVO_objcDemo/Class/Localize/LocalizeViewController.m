@@ -32,6 +32,9 @@ static NSString *kLanguageCodeKey = @"LanguageCodeKey";
 {
     [super viewDidLoad];
     
+    if (![LanguageCenter sharedInstance].currentLanguageCode)
+        [LanguageCenter sharedInstance].currentLanguageCode = @"en";
+        
     languageArray = [NSMutableArray array];
     
     [languageArray addObject:

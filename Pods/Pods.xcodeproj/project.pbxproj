@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		05FBC19E4A36FA0C6F14D9EC6ACC2969 /* CHCSVParser-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E9B28C4DCCFA273ED65A54F27FBC55D9 /* CHCSVParser-dummy.m */; };
 		2905381350CEFFBFFA9BC8B5D027F190 /* MASConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = BF147A21FFA6F9BDA8725EF63D0E612C /* MASConstraint.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2979E54C4AFD27076576E82ADEED2F00 /* NSLayoutConstraint+MASDebugAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E1D7EF59F46BA44373B4F15131C4FE5 /* NSLayoutConstraint+MASDebugAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2F85D170E76C661AB0D9E9A8B206C78D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E7E5AF37923BFA48D6994B9BFC6535F /* Foundation.framework */; };
@@ -18,15 +17,16 @@
 		4AA64F5CDCDC973EBF10222703369F64 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E7E5AF37923BFA48D6994B9BFC6535F /* Foundation.framework */; };
 		53180B087498F7380187B9FE8407FC22 /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 272643F56613CA0D336AE3DBF19DC404 /* Pods-dummy.m */; };
 		5457FCC2699281B5A4203BA1559F593F /* NSArray+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 07B5C292F761BC6C6BAE3112A909323C /* NSArray+MASAdditions.m */; };
+		55966B3DE57C2EC92D37B86CEE9384C1 /* CHCSVParser-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E9B28C4DCCFA273ED65A54F27FBC55D9 /* CHCSVParser-dummy.m */; };
 		81403CAF6C4C1D3DC8B199289C3A6F59 /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = AC4E8BA30372F8B9C9591FE602235C96 /* View+MASAdditions.m */; };
 		81599471BAB0420D54E1ADF8507A5113 /* Masonry-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8979A3092D5B440AB60A6260F99E3D6A /* Masonry-dummy.m */; };
 		9205037BA8C22574B33FC96C5EA829A3 /* Masonry.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F1BB5BA36950DE302EB5D9ACDF0D7FB /* Masonry.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		99D8C610BC84BE231C5D3D280F3B12AF /* MASCompositeConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = CF7E2C6D55DB24489AF23CDB7D14D9C9 /* MASCompositeConstraint.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9A6AE1EF2E94AEB6912BE845583E7D57 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3B7BDF5CE5CB8F095FE12DA55D9A9BB /* UIKit.framework */; };
+		9E8A31706D889EC5E1924E4B2263A5B3 /* CHCSVParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FB1249C52A214FAF6569732BD056092 /* CHCSVParser.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		A44AF130E4C5313CD193D9BF68853026 /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 99F89274D27B7E58033A704EAF0490B6 /* MASViewAttribute.m */; };
 		A7D31BD1F3AD4ED4612467FAD332F388 /* NSArray+MASShorthandAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 5BF5275CA5DC0EE1D1285528CDC6A334 /* NSArray+MASShorthandAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AF62B956405F7734F5A9B8F3FD4B1B96 /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA0640616EC1C17265526BC69058809 /* ViewController+MASAdditions.m */; };
-		B0E779F4F9C8CCA3D0A1E640C96C2984 /* CHCSVParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FB1249C52A214FAF6569732BD056092 /* CHCSVParser.m */; };
 		B2B7C90BA9C4DBD9851C75AC801B0E8E /* MASConstraint+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 64172448C8C66E13BF2A03E78F5153D0 /* MASConstraint+Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B3134CF9B29F806AA70A19BDFF6D69EF /* CHCSVParser.h in Headers */ = {isa = PBXBuildFile; fileRef = EFD882F096A8D6CF6639D72407514F64 /* CHCSVParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BCD4B362C6194513150915437754E2D4 /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 304BD6F8331CCB20DDAF92CCB89C26EE /* MASCompositeConstraint.m */; };
@@ -323,7 +323,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2D3C8B0098ECEC2EFA18101CDBC42052 /* Build configuration list for PBXNativeTarget "CHCSVParser" */;
 			buildPhases = (
-				5D9350A1143623B0D91C65E11D141B98 /* Sources */,
+				3CDD9C127AEF4CC498D4B14D039B1D6D /* Sources */,
 				B690A9AF1DE0835CCD80166A10F6287E /* Frameworks */,
 				769BD8BA648BB85D93A144D407337819 /* Headers */,
 			);
@@ -400,12 +400,12 @@
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		5D9350A1143623B0D91C65E11D141B98 /* Sources */ = {
+		3CDD9C127AEF4CC498D4B14D039B1D6D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				05FBC19E4A36FA0C6F14D9EC6ACC2969 /* CHCSVParser-dummy.m in Sources */,
-				B0E779F4F9C8CCA3D0A1E640C96C2984 /* CHCSVParser.m in Sources */,
+				55966B3DE57C2EC92D37B86CEE9384C1 /* CHCSVParser-dummy.m in Sources */,
+				9E8A31706D889EC5E1924E4B2263A5B3 /* CHCSVParser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

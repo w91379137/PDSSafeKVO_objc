@@ -9,9 +9,9 @@
 #ifndef PDSSafeKVO_objc_h
 #define PDSSafeKVO_objc_h
 
-#import "PDSSetting.h"
 #import <Foundation/Foundation.h>
 #include <objc/runtime.h>
+#import "PDSSetting.h"
 
 typedef void (^KVOBlock)(NSString *keyPath, id object, NSDictionary *change, void *context);
 

@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name     = 'PDSSafeKVO_objc'
-    s.version  = '0.0.4'
+    s.version  = '0.0.5'
     s.summary  = 'Description of your projectx'
     s.license  = {
         :type => 'MIT',
@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
         :git => 'https://github.com/w91379137/PDSSafeKVO_objc.git',
         :tag => s.version.to_s
     }
-    s.source_files = 'PDSSafeKVO_objc/*{.h,.c,.m,.rtf}'
+    s.source_files = 'PDSSafeKVO_objc/**/*'
     s.requires_arc = true
 
     s.platform = :ios
