@@ -7,9 +7,11 @@
 //
 
 #import "MainViewController.h"
+
 #import "ButtonConnectController.h"
 #import "PullViewViewController.h"
 #import "LocalizeViewController.h"
+#import "ParallaxScrollingViewController.h"
 
 static NSString *kTitleKey = @"TitleKey";
 static NSString *kClassKey = @"ClassKey";
@@ -40,6 +42,10 @@ static NSString *kClassKey = @"ClassKey";
     [actionArray addObject:
      @{kTitleKey : @"多國語測試",
        kClassKey : NSStringFromClass([LocalizeViewController class])}];
+    
+    [actionArray addObject:
+     @{kTitleKey : @"視差動畫",
+       kClassKey : NSStringFromClass([ParallaxScrollingViewController class])}];
 }
 
 #pragma mark - UITableViewDataSource

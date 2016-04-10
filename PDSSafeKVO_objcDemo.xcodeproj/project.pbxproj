@@ -32,6 +32,12 @@
 		F8B0DEC51CA69FF300E42329 /* NSObject+PDSSafeKVO.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B0DEBF1CA69FF300E42329 /* NSObject+PDSSafeKVO.m */; };
 		F8B0DEC61CA69FF300E42329 /* PDSKVOOption.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B0DEC11CA69FF300E42329 /* PDSKVOOption.m */; };
 		F8B0DEC71CA69FF300E42329 /* PDSKVORecord.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B0DEC31CA69FF300E42329 /* PDSKVORecord.m */; };
+		F8B9762B1CBA462100F0C539 /* ParallaxScrollingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B976291CBA462100F0C539 /* ParallaxScrollingViewController.m */; };
+		F8B9762C1CBA462100F0C539 /* ParallaxScrollingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8B9762A1CBA462100F0C539 /* ParallaxScrollingViewController.xib */; };
+		F8B9762F1CBA465400F0C539 /* image000.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F8B9762D1CBA465400F0C539 /* image000.jpg */; };
+		F8B976301CBA465400F0C539 /* image001.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F8B9762E1CBA465400F0C539 /* image001.jpg */; };
+		F8B976341CBA468400F0C539 /* ParallaxScrollingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B976321CBA468400F0C539 /* ParallaxScrollingTableViewCell.m */; };
+		F8B976351CBA468400F0C539 /* ParallaxScrollingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8B976331CBA468400F0C539 /* ParallaxScrollingTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +96,14 @@
 		F8B0DEC21CA69FF300E42329 /* PDSKVORecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDSKVORecord.h; sourceTree = "<group>"; };
 		F8B0DEC31CA69FF300E42329 /* PDSKVORecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDSKVORecord.m; sourceTree = "<group>"; };
 		F8B0DEC41CA69FF300E42329 /* PDSSafeKVO_objc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDSSafeKVO_objc.h; sourceTree = "<group>"; };
+		F8B976281CBA462100F0C539 /* ParallaxScrollingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParallaxScrollingViewController.h; sourceTree = "<group>"; };
+		F8B976291CBA462100F0C539 /* ParallaxScrollingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParallaxScrollingViewController.m; sourceTree = "<group>"; };
+		F8B9762A1CBA462100F0C539 /* ParallaxScrollingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ParallaxScrollingViewController.xib; sourceTree = "<group>"; };
+		F8B9762D1CBA465400F0C539 /* image000.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image000.jpg; sourceTree = "<group>"; };
+		F8B9762E1CBA465400F0C539 /* image001.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image001.jpg; sourceTree = "<group>"; };
+		F8B976311CBA468400F0C539 /* ParallaxScrollingTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParallaxScrollingTableViewCell.h; sourceTree = "<group>"; };
+		F8B976321CBA468400F0C539 /* ParallaxScrollingTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParallaxScrollingTableViewCell.m; sourceTree = "<group>"; };
+		F8B976331CBA468400F0C539 /* ParallaxScrollingTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ParallaxScrollingTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +152,7 @@
 				F85EB3131CAC6440002E9E54 /* ButtonConnect */,
 				F85EB32C1CAC6E45002E9E54 /* PullView */,
 				F85AE7481CADC04900AE507A /* Localize */,
+				F8B976271CBA460700F0C539 /* ParallaxScrolling */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -195,6 +210,8 @@
 			isa = PBXGroup;
 			children = (
 				F85EB3241CAC657A002E9E54 /* 20140916105724.png */,
+				F8B9762D1CBA465400F0C539 /* image000.jpg */,
+				F8B9762E1CBA465400F0C539 /* image001.jpg */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -257,16 +274,29 @@
 		F8B0DEBD1CA69FF300E42329 /* PDSSafeKVO_objc */ = {
 			isa = PBXGroup;
 			children = (
+				F8B0DEC41CA69FF300E42329 /* PDSSafeKVO_objc.h */,
 				F8B0DEBE1CA69FF300E42329 /* NSObject+PDSSafeKVO.h */,
 				F8B0DEBF1CA69FF300E42329 /* NSObject+PDSSafeKVO.m */,
 				F8B0DEC01CA69FF300E42329 /* PDSKVOOption.h */,
 				F8B0DEC11CA69FF300E42329 /* PDSKVOOption.m */,
 				F8B0DEC21CA69FF300E42329 /* PDSKVORecord.h */,
 				F8B0DEC31CA69FF300E42329 /* PDSKVORecord.m */,
-				F8B0DEC41CA69FF300E42329 /* PDSSafeKVO_objc.h */,
 			);
 			path = PDSSafeKVO_objc;
 			sourceTree = SOURCE_ROOT;
+		};
+		F8B976271CBA460700F0C539 /* ParallaxScrolling */ = {
+			isa = PBXGroup;
+			children = (
+				F8B976281CBA462100F0C539 /* ParallaxScrollingViewController.h */,
+				F8B976291CBA462100F0C539 /* ParallaxScrollingViewController.m */,
+				F8B9762A1CBA462100F0C539 /* ParallaxScrollingViewController.xib */,
+				F8B976311CBA468400F0C539 /* ParallaxScrollingTableViewCell.h */,
+				F8B976321CBA468400F0C539 /* ParallaxScrollingTableViewCell.m */,
+				F8B976331CBA468400F0C539 /* ParallaxScrollingTableViewCell.xib */,
+			);
+			path = ParallaxScrolling;
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
@@ -363,12 +393,16 @@
 			files = (
 				F85EB31F1CAC6536002E9E54 /* ButtonConnectController.xib in Resources */,
 				F876D7141C85D0AD0023BF08 /* LaunchScreen.storyboard in Resources */,
+				F8B9762F1CBA465400F0C539 /* image000.jpg in Resources */,
 				F85EB32A1CAC658B002E9E54 /* MainViewController.xib in Resources */,
+				F8B976351CBA468400F0C539 /* ParallaxScrollingTableViewCell.xib in Resources */,
 				F85AE7621CADCC1500AE507A /* 多國語言 - 工作表1.csv in Resources */,
 				F876D7111C85D0AD0023BF08 /* Assets.xcassets in Resources */,
 				F85AE74D1CADC05C00AE507A /* LocalizeViewController.xib in Resources */,
 				F85EB3311CAC6E5D002E9E54 /* PullViewViewController.xib in Resources */,
+				F8B976301CBA465400F0C539 /* image001.jpg in Resources */,
 				F85EB3251CAC657A002E9E54 /* 20140916105724.png in Resources */,
+				F8B9762C1CBA462100F0C539 /* ParallaxScrollingViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -493,6 +527,8 @@
 				F85EB31E1CAC6536002E9E54 /* ButtonConnectController.m in Sources */,
 				F85EB3221CAC6542002E9E54 /* UIButton+Connect.m in Sources */,
 				F85AE7651CADD2D000AE507A /* TranslationElement.m in Sources */,
+				F8B9762B1CBA462100F0C539 /* ParallaxScrollingViewController.m in Sources */,
+				F8B976341CBA468400F0C539 /* ParallaxScrollingTableViewCell.m in Sources */,
 				F85AE74C1CADC05C00AE507A /* LocalizeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
