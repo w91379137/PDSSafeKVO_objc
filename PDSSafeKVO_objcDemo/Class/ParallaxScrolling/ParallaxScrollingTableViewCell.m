@@ -64,7 +64,8 @@
     
     //影像高 - cell高
     float canShiftHeight =
-    (self.bgImageView.frame.size.height - self.frame.size.height) / 2;
+    150 / 2.0; //請手動輸入 self.bgImageView.frame 可能是錯的
+    //(self.bgImageView.frame.size.height - self.frame.size.height) / 2;
     
     //(cell底 - contentOffset.y) / tableView高
     float bottom =
